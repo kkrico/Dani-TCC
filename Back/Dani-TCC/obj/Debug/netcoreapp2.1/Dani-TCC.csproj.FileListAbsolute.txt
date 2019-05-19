@@ -1,0 +1,14 @@
+C:\Users\ramos\Desktop\Dani\Back\Dani-TCC\bin\Debug\netcoreapp2.1\Dani-TCC.deps.json
+C:\Users\ramos\Desktop\Dani\Back\Dani-TCC\bin\Debug\netcoreapp2.1\Dani-TCC.runtimeconfig.json
+C:\Users\ramos\Desktop\Dani\Back\Dani-TCC\bin\Debug\netcoreapp2.1\Dani-TCC.runtimeconfig.dev.json
+C:\Users\ramos\Desktop\Dani\Back\Dani-TCC\bin\Debug\netcoreapp2.1\Dani-TCC.dll
+C:\Users\ramos\Desktop\Dani\Back\Dani-TCC\bin\Debug\netcoreapp2.1\Dani-TCC.pdb
+C:\Users\ramos\Desktop\Dani\Back\Dani-TCC\obj\Debug\netcoreapp2.1\Dani-TCC.csprojAssemblyReference.cache
+C:\Users\ramos\Desktop\Dani\Back\Dani-TCC\obj\Debug\netcoreapp2.1\Dani-TCC.csproj.CoreCompileInputs.cache
+C:\Users\ramos\Desktop\Dani\Back\Dani-TCC\obj\Debug\netcoreapp2.1\Dani-TCC.RazorAssemblyInfo.cache
+C:\Users\ramos\Desktop\Dani\Back\Dani-TCC\obj\Debug\netcoreapp2.1\Dani-TCC.RazorAssemblyInfo.cs
+C:\Users\ramos\Desktop\Dani\Back\Dani-TCC\obj\Debug\netcoreapp2.1\Dani-TCC.AssemblyInfoInputs.cache
+C:\Users\ramos\Desktop\Dani\Back\Dani-TCC\obj\Debug\netcoreapp2.1\Dani-TCC.AssemblyInfo.cs
+C:\Users\ramos\Desktop\Dani\Back\Dani-TCC\obj\Debug\netcoreapp2.1\Dani-TCC.RazorTargetAssemblyInfo.cache
+C:\Users\ramos\Desktop\Dani\Back\Dani-TCC\obj\Debug\netcoreapp2.1\Dani-TCC.dll
+C:\Users\ramos\Desktop\Dani\Back\Dani-TCC\obj\Debug\netcoreapp2.1\Dani-TCC.pdb
