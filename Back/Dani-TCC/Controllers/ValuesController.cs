@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Dani_TCC.Core.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Dani_TCC.Controllers
@@ -10,6 +11,13 @@ namespace Dani_TCC.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly IQuestaoService _questaoService;
+
+        public ValuesController(IQuestaoService questaoService)
+        {
+            _questaoService = questaoService;
+        }
+        
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()

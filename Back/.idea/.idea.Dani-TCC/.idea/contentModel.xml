@@ -28,14 +28,19 @@
       </e>
       <e p="Dani-TCC.Core" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Class1.cs" t="Include" />
         <e p="Dani-TCC.Core.csproj" t="IncludeRecursive" />
+        <e p="Model" t="Include">
+          <e p="Questao.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.1" t="Include">
               <e p="Dani-TCC.Core.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
+        </e>
+        <e p="Services" t="Include">
+          <e p="QuestaoService.cs" t="Include" />
         </e>
       </e>
       <e p="Dani-TCC.sln" t="IncludeFlat" />
