@@ -5,8 +5,4 @@
         <RootNamespace>Dani_TCC.Core</RootNamespace>
     </PropertyGroup>
 
-    <ItemGroup>
-      <PackageReference Include="Dapper" Version="1.60.6" />
-    </ItemGroup>
-
 </Project>
