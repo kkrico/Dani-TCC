@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Dani_TCC.Core.Services;
+using Dani_TCC.Core.Service;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Dani_TCC.Controllers
