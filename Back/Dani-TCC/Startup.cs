@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace Dani_TCC
 {
@@ -19,13 +16,36 @@ namespace Dani_TCC
         {
             Configuration = configuration;
         }
-
+        
         public IConfiguration Configuration { get; }
+        public IContainer Container { get; private set; }
+
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            
+            
+            
+            services.AddSwaggerGen(s =>
+            {
+                s.SwaggerDoc("v1", new Info
+                {
+                    Version = "v1",
+                    Title = "TCC Dani",
+                    Description = "API Swagger surface",
+                    Contact = new Contact { Name = "Daniel Ramos", Email = "ramos.danielferreira@gmail.com", Url = "http://dframos.com" },
+                });
+            });
+            
+            
+            var containerBuilder = new ContainerBuilder();
+            containerBuilder.RegisterModule<DefaultModule>();
+            containerBuilder.Populate(services);
+            IContainer container = containerBuilder.Build();
+            
+            return new AutofacServiceProvider(container);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -33,13 +53,19 @@ namespace Dani_TCC
         {
             if (env.IsDevelopment())
             {
+                app.UseSwagger();
+                app.UseSwaggerUI(s =>
+                {
+                    s.SwaggerEndpoint("/swagger/v1/swagger.json", "Modelo Arquitetura API v1.1");
+                });
+
                 app.UseDeveloperExceptionPage();
             }
             else
             {
                 app.UseHsts();
             }
-
+           
             app.UseHttpsRedirection();
             app.UseMvc();
         }

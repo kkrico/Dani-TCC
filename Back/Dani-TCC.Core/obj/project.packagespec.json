@@ -26,6 +26,10 @@
   "frameworks": {
     "netcoreapp2.1": {
       "dependencies": {
+        "MediatR": {
+          "target": "Package",
+          "version": "[7.0.0, )"
+        },
         "Microsoft.NETCore.App": {
           "suppressParent": "All",
           "target": "Package",

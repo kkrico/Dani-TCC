@@ -30,6 +30,14 @@
   "frameworks": {
     "netcoreapp2.1": {
       "dependencies": {
+        "Autofac.Extensions.DependencyInjection": {
+          "target": "Package",
+          "version": "[4.4.0, )"
+        },
+        "MediatR": {
+          "target": "Package",
+          "version": "[7.0.0, )"
+        },
         "Microsoft.AspNetCore.App": {
           "suppressParent": "All",
           "target": "Package",
@@ -46,6 +54,10 @@
           "target": "Package",
           "version": "[2.1.0, )",
           "autoReferenced": true
+        },
+        "Swashbuckle.AspNetCore": {
+          "target": "Package",
+          "version": "[4.0.1, )"
         }
       },
       "imports": [

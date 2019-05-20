@@ -2,27 +2,31 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Dani_TCC.Core.Events;
 using Dani_TCC.Core.Service;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Dani_TCC.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class ValuesController : ApiControllerBase
     {
         private readonly IQuestaoService _questaoService;
 
-        public ValuesController(IQuestaoService questaoService)
+        public ValuesController(INotificationHandler<DomainNotification> notifications, 
+            IMediatorHandlerNormalize mediator,
+            IQuestaoService questaoService) : base(notifications, mediator)
         {
             _questaoService = questaoService;
         }
         
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public IActionResult Get()
         {
-            return new string[] { "value1", "value2" };
+            return Response(new string[] { "value1", "value2" });
         }
 
         // GET api/values/5
@@ -49,5 +53,7 @@ namespace Dani_TCC.Controllers
         public void Delete(int id)
         {
         }
+
+       
     }
 }

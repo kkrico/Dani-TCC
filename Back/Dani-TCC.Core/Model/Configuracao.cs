@@ -5,9 +5,4 @@ namespace Dani_TCC.Core.Model
         public string Enunciado { get; set; }
         public string LocalFotos { get; set; }
     }
-
-    public class Pessoa
-    {
-         
-    }
 }

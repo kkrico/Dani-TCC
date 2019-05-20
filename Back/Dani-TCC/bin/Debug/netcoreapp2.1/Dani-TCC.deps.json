@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "e071b1a7c9d575b1b3d9ba6c9a1be1d9c6701ca2"
+    "signature": "538fff140f205890e6d88e6a428b9d2b5be8d3a7"
   },
   "compilationOptions": {
     "defines": [
@@ -24,15 +24,56 @@
     ".NETCoreApp,Version=v2.1": {
       "Dani-TCC/1.0.0": {
         "dependencies": {
+          "Autofac.Extensions.DependencyInjection": "4.4.0",
+          "Dani-TCC.Core": "1.0.0",
+          "MediatR": "7.0.0",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
-          "Microsoft.NETCore.App": "2.1.0"
+          "Microsoft.NETCore.App": "2.1.0",
+          "Swashbuckle.AspNetCore": "4.0.1"
         },
         "runtime": {
           "Dani-TCC.dll": {}
         },
         "compile": {
           "Dani-TCC.dll": {}
+        }
+      },
+      "Autofac/4.9.1": {
+        "runtime": {
+          "lib/netstandard2.0/Autofac.dll": {
+            "assemblyVersion": "4.9.1.0",
+            "fileVersion": "4.9.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Autofac.dll": {}
+        }
+      },
+      "Autofac.Extensions.DependencyInjection/4.4.0": {
+        "dependencies": {
+          "Autofac": "4.9.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Autofac.Extensions.DependencyInjection.dll": {
+            "assemblyVersion": "4.4.0.0",
+            "fileVersion": "4.4.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Autofac.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "MediatR/7.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/MediatR.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/MediatR.dll": {}
         }
       },
       "Microsoft.AspNetCore.Razor.Design/2.1.2": {},
@@ -205,6 +246,82 @@
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.0"
+        }
+      },
+      "Swashbuckle.AspNetCore/4.0.1": {
+        "dependencies": {
+          "Swashbuckle.AspNetCore.Swagger": "4.0.1",
+          "Swashbuckle.AspNetCore.SwaggerGen": "4.0.1",
+          "Swashbuckle.AspNetCore.SwaggerUI": "4.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.Swagger/4.0.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "2.1.1",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.1.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerGen/4.0.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.ApiExplorer": "2.1.1",
+          "Microsoft.AspNetCore.Mvc.Core": "2.1.1",
+          "Microsoft.AspNetCore.Mvc.DataAnnotations": "2.1.1",
+          "Swashbuckle.AspNetCore.Swagger": "4.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerUI/4.0.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Routing": "2.1.1",
+          "Microsoft.AspNetCore.StaticFiles": "2.1.1",
+          "Microsoft.Extensions.FileProviders.Embedded": "2.1.1",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
+        }
+      },
+      "Dani-TCC.Core/1.0.0": {
+        "dependencies": {
+          "MediatR": "7.0.0"
+        },
+        "runtime": {
+          "Dani-TCC.Core.dll": {}
+        },
+        "compile": {
+          "Dani-TCC.Core.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3155,6 +3272,27 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Autofac/4.9.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Dk3UQD94XM2HBjquOZoPWrQBUcv9G/K24K/qTiUJi13Fz/0X/wxcQi8z3K1ProCPxuZvadSgrzbpbni2HX1YTg==",
+      "path": "autofac/4.9.1",
+      "hashPath": "autofac.4.9.1.nupkg.sha512"
+    },
+    "Autofac.Extensions.DependencyInjection/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XO9Zk1zIUv9FyuGg9biGlGTPrSamdZKSZ+lHGTxnOaKkTmW1iWP276nlQ/l2V3XoVk86+SHyRnzH5MmhULGamg==",
+      "path": "autofac.extensions.dependencyinjection/4.4.0",
+      "hashPath": "autofac.extensions.dependencyinjection.4.4.0.nupkg.sha512"
+    },
+    "MediatR/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YGFwy3pCM13K+s3nrSDjC/wP4AYSUt7+HLtgiPPRBe2bG1joeFdOq17YZ2Y1lc4lg+m9ew0dMcQHVn5yGH7uDA==",
+      "path": "mediatr/7.0.0",
+      "hashPath": "mediatr.7.0.0.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Razor.Design/2.1.2": {
       "type": "package",
       "serviceable": true,
@@ -3210,6 +3348,39 @@
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-k8TzWTpjwO+4xXsMaaAsAPAdYKyM5wuRvSP+ZmgtyXwhW45ChBVq3xdVJ8Tz+hQ0ziBZSh5p6r2dkRN6SyasVA==",
+      "path": "swashbuckle.aspnetcore/4.0.1",
+      "hashPath": "swashbuckle.aspnetcore.4.0.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.Swagger/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2+dXBiOvwjNmkMkBOqGU9ShBJXQp6+UN/Kxfk3HLxwsof9zzgRZ+3rOdjHQuYiY7t1Nl7wlCgn9HbmJyZGhdaQ==",
+      "path": "swashbuckle.aspnetcore.swagger/4.0.1",
+      "hashPath": "swashbuckle.aspnetcore.swagger.4.0.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.SwaggerGen/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-opm/wgG8u987ZuAUtL1E8XrJig+UbGYbFmz8VnA8Vn3AqZyQZy4k243X9egz1iWl/B6sNcgMlFyv3wkdmjJX6g==",
+      "path": "swashbuckle.aspnetcore.swaggergen/4.0.1",
+      "hashPath": "swashbuckle.aspnetcore.swaggergen.4.0.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.SwaggerUI/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EjPeIYSMLr5FrY4sVJiWrzIQe07Hriv8tOztJa7US88im/tO+tX70y7OJ2Cr8QYojc7IotjZSH1lD8j44DLnrQ==",
+      "path": "swashbuckle.aspnetcore.swaggerui/4.0.1",
+      "hashPath": "swashbuckle.aspnetcore.swaggerui.4.0.1.nupkg.sha512"
+    },
+    "Dani-TCC.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",

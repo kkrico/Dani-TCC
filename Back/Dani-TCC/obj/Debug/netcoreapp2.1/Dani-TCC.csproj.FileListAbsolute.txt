@@ -12,3 +12,6 @@ C:\Users\ramos\Desktop\Dani\Back\Dani-TCC\obj\Debug\netcoreapp2.1\Dani-TCC.Assem
 C:\Users\ramos\Desktop\Dani\Back\Dani-TCC\obj\Debug\netcoreapp2.1\Dani-TCC.RazorTargetAssemblyInfo.cache
 C:\Users\ramos\Desktop\Dani\Back\Dani-TCC\obj\Debug\netcoreapp2.1\Dani-TCC.dll
 C:\Users\ramos\Desktop\Dani\Back\Dani-TCC\obj\Debug\netcoreapp2.1\Dani-TCC.pdb
+C:\Users\ramos\Desktop\Dani\Back\Dani-TCC\bin\Debug\netcoreapp2.1\Dani-TCC.Core.dll
+C:\Users\ramos\Desktop\Dani\Back\Dani-TCC\bin\Debug\netcoreapp2.1\Dani-TCC.Core.pdb
+C:\Users\ramos\Desktop\Dani\Back\Dani-TCC\obj\Debug\netcoreapp2.1\Dani-TCC.csproj.CopyComplete
