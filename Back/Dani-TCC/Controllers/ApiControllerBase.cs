@@ -10,10 +10,10 @@ namespace Dani_TCC
     public abstract class ApiControllerBase : ControllerBase
     {
         private readonly DomainNotificationHandler _notifications;
-        private readonly IMediatorHandlerNormalize _mediator;
+        private readonly IMediatorHandler _mediator;
 
         protected ApiControllerBase(INotificationHandler<DomainNotification> notifications,
-            IMediatorHandlerNormalize mediator)
+            IMediatorHandler mediator)
         {
             _notifications = (DomainNotificationHandler)notifications;
             _mediator = mediator;

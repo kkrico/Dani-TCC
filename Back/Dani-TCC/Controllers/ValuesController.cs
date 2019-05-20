@@ -16,20 +16,18 @@ namespace Dani_TCC.Controllers
         private readonly IQuestaoService _questaoService;
 
         public ValuesController(INotificationHandler<DomainNotification> notifications, 
-            IMediatorHandlerNormalize mediator,
+            IMediatorHandler mediator,
             IQuestaoService questaoService) : base(notifications, mediator)
         {
             _questaoService = questaoService;
         }
         
-        // GET api/values
         [HttpGet]
         public IActionResult Get()
         {
-            return Response(new string[] { "value1", "value2" });
+            return Response(new{TotalQuestoes = _questaoService.QuantidadeQuestoes()});
         }
 
-        // GET api/values/5
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {

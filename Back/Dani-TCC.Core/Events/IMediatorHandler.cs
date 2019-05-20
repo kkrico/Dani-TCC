@@ -3,17 +3,18 @@ using MediatR;
 
 namespace Dani_TCC.Core.Events
 {
-    public interface IMediatorHandlerNormalize
+    public interface IMediatorHandler
     {
         Task RaiseEvent<T>(T @event) where T : Event;
     }
     
-    public sealed class InMemoryBusNormalize : IMediatorHandlerNormalize
+    public sealed class InMemoryMediatorHandler : IMediatorHandler
     {
         private readonly IMediator _mediator;
 
-        public InMemoryBusNormalize(IMediator mediator)
-        {_mediator = mediator;
+        public InMemoryMediatorHandler(IMediator mediator)
+        {
+            _mediator = mediator;
         }
 
         public Task RaiseEvent<T>(T @event) where T : Event

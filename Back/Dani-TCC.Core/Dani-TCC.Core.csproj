@@ -3,10 +3,13 @@
     <PropertyGroup>
         <TargetFramework>netcoreapp2.1</TargetFramework>
         <RootNamespace>Dani_TCC.Core</RootNamespace>
+        <RuntimeFrameworkVersion>2.1.8</RuntimeFrameworkVersion>
     </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="MediatR" Version="7.0.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.1.8" />
+      <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.16" />
     </ItemGroup>
 
 </Project>
