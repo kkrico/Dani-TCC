@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dani-TCC", "Dani-TCC\Dani-T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dani-TCC.Core", "Dani-TCC.Core\Dani-TCC.Core.csproj", "{795D5ED4-7A8D-4F84-A5B4-B173891F8CA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dani-TCC.Tests", "Dani-TCC.Tests\Dani-TCC.Tests.csproj", "{F1ABE50B-8FC6-4458-91F7-AA1BC153A98C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{795D5ED4-7A8D-4F84-A5B4-B173891F8CA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{795D5ED4-7A8D-4F84-A5B4-B173891F8CA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{795D5ED4-7A8D-4F84-A5B4-B173891F8CA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1ABE50B-8FC6-4458-91F7-AA1BC153A98C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1ABE50B-8FC6-4458-91F7-AA1BC153A98C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1ABE50B-8FC6-4458-91F7-AA1BC153A98C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1ABE50B-8FC6-4458-91F7-AA1BC153A98C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
