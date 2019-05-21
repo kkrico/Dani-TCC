@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     20/05/2019 20:30:42                          */
+/* Created on:     20/05/2019 22:55:09                          */
 /*==============================================================*/
 
 
@@ -49,6 +49,11 @@ alter table PESQUISA comment 'Representa uma pesquisa';
 create table PESSOA
 (
    IDPESSOA             int not null auto_increment,
+   IDFAIXAETARIA        int,
+   IDGENERO             int,
+   IDETNIA              int,
+   IDSEXUALIDADE        int,
+   IDRENDAFAMILIA       int,
    EMAILPESSOA          varchar(100),
    primary key (IDPESSOA)
 );

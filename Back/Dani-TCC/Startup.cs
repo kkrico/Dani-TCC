@@ -18,8 +18,6 @@ namespace Dani_TCC
         }
         
         public IConfiguration Configuration { get; }
-        public IContainer Container { get; private set; }
-
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public IServiceProvider ConfigureServices(IServiceCollection services)

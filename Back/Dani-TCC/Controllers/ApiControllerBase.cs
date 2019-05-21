@@ -21,12 +21,12 @@ namespace Dani_TCC
 
         protected IEnumerable<DomainNotification> Notifications => _notifications.GetNotifications();
 
-        protected bool IsValidOperation()
+        private bool IsValidOperation()
         {
             return (!_notifications.HasNotifications());
         }
 
-        protected IActionResult Response(object result = null)
+        protected new IActionResult Response(object result = null)
         {
             if (IsValidOperation())
             {

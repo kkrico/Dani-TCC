@@ -5,16 +5,13 @@ namespace Dani_TCC.Core.Service
 {
     public class QuestaoService : IQuestaoService
     {
-        private readonly DbContext _dbContext;
-
-        public QuestaoService(DbContext dbContext)
+        public QuestaoService()
         {
-            _dbContext = dbContext;
         }
 
         public int QuantidadeQuestoes()
         {
-            return _dbContext.Questao.Count();
+            return default(int);
         }
     }
 }

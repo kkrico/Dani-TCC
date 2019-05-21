@@ -14,6 +14,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="ApiControllerBase.cs" t="Include" />
+          <e p="EtniaController.cs" t="Include" />
           <e p="ValuesController.cs" t="Include" />
         </e>
         <e p="Dani-TCC.csproj" t="IncludeRecursive" />
@@ -55,13 +56,17 @@
             <e p="IBuscaEntidade.cs" t="Include" />
             <e p="IParseArquivo.cs" t="Include" />
           </e>
-          <e p="Configuracao.cs" t="Include" />
-          <e p="DbContext.cs" t="Include" />
+          <e p="Etnia.cs" t="Include" />
+          <e p="FaixaEtaria.cs" t="Include" />
           <e p="Foto.cs" t="Include" />
+          <e p="Genero.cs" t="Include" />
           <e p="Pesquisa.cs" t="Include" />
+          <e p="PesquisaTccDbContext.cs" t="Include" />
           <e p="Pessoa.cs" t="Include" />
           <e p="Questao.cs" t="Include" />
+          <e p="RendaFamiliar.cs" t="Include" />
           <e p="Resposta.cs" t="Include" />
+          <e p="Sexualidade.cs" t="Include" />
           <e p="TipoParse.cs" t="Include" />
           <e p="Valoresresposta.cs" t="Include" />
         </e>
@@ -73,8 +78,12 @@
           </e>
         </e>
         <e p="Service" t="Include">
+          <e p="IEnumService.cs" t="Include" />
           <e p="IQuestaoService.cs" t="Include" />
           <e p="QuestaoService.cs" t="Include" />
+        </e>
+        <e p="ViewModel" t="Include">
+          <e p="EnumViewModel.cs" t="Include" />
         </e>
       </e>
       <e p="Dani-TCC.sln" t="IncludeFlat" />

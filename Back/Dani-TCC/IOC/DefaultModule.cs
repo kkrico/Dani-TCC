@@ -21,9 +21,6 @@ namespace Dani_TCC
                 return t => componentContext.Resolve(t);
             });
 
-            builder.RegisterType<DbContext>()
-                .InstancePerLifetimeScope();
-
             builder.RegisterAssemblyTypes(typeof(Dani_TCC.Core.Service.QuestaoService).Assembly)
                 .PublicOnly()
                 .Where(e => e.Name.EndsWith("Service"))
