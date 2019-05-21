@@ -1,7 +1,4 @@
-using System.Linq;
-using Dani_TCC.Core.Model;
-
-namespace Dani_TCC.Core.Service
+namespace Dani_TCC.Core.Services
 {
     public class QuestaoService : IQuestaoService
     {

@@ -1,6 +1,6 @@
 using System.ComponentModel;
 
-namespace Dani_TCC.Core.Model
+namespace Dani_TCC.Core.Models
 {
     public enum Etnia
     {

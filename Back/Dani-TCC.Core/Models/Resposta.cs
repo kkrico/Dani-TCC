@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace Dani_TCC.Core.Model
+namespace Dani_TCC.Core.Models
 {
     public partial class Resposta
     {

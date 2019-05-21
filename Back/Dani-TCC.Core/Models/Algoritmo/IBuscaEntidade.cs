@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Dani_TCC.Core.Model.Algoritmo
+namespace Dani_TCC.Core.Models.Algoritmo
 {
     /// <summary>
     ///     Dado determinado pasta, este algoritmo le os arquivos e extrai as entidades

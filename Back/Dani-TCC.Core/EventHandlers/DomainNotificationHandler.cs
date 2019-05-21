@@ -2,9 +2,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Dani_TCC.Core.Events;
 using MediatR;
 
-namespace Dani_TCC.Core.Events
+namespace Dani_TCC.Core.EventHandlers
 {
     public class DomainNotificationHandler : INotificationHandler<DomainNotification>
     {

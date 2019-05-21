@@ -1,16 +1,14 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
 
-namespace Dani_TCC.Core.Model
+namespace Dani_TCC.Core.Models
 {
-    public partial class DB_PESQUISA_TCCContext : DbContext
+    public partial class DbPesquisaTccContext : DbContext
     {
-        public DB_PESQUISA_TCCContext()
+        public DbPesquisaTccContext()
         {
         }
 
-        public DB_PESQUISA_TCCContext(DbContextOptions<DB_PESQUISA_TCCContext> options)
+        public DbPesquisaTccContext(DbContextOptions<DbPesquisaTccContext> options)
             : base(options)
         {
         }

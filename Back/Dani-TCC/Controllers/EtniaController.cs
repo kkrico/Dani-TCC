@@ -1,12 +1,13 @@
+using Dani_TCC.Core.EventHandlers;
 using Dani_TCC.Core.Events;
-using Dani_TCC.Core.Model;
-using Dani_TCC.Core.Service;
+using Dani_TCC.Core.Models;
+using Dani_TCC.Core.Services;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Dani_TCC.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class EtniaController : ApiControllerBase 
     {

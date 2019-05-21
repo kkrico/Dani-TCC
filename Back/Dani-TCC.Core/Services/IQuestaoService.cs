@@ -1,4 +1,4 @@
-namespace Dani_TCC.Core.Service
+namespace Dani_TCC.Core.Services
 {
     public interface IQuestaoService
     {

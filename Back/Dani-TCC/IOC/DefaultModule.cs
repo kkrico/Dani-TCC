@@ -1,7 +1,7 @@
 using Autofac;
+using Dani_TCC.Core.EventHandlers;
 using Dani_TCC.Core.Events;
-using Dani_TCC.Core.Model;
-using Dani_TCC.Core.Service;
+using Dani_TCC.Core.Services;
 using MediatR;
 
 namespace Dani_TCC
@@ -21,7 +21,7 @@ namespace Dani_TCC
                 return t => componentContext.Resolve(t);
             });
 
-            builder.RegisterAssemblyTypes(typeof(Dani_TCC.Core.Service.QuestaoService).Assembly)
+            builder.RegisterAssemblyTypes(typeof(QuestaoService).Assembly)
                 .PublicOnly()
                 .Where(e => e.Name.EndsWith("Service"))
                 .InstancePerLifetimeScope()

@@ -1,4 +1,4 @@
-namespace Dani_TCC.Core.Model
+namespace Dani_TCC.Core.Models
 {
     public enum FaixaEtaria
     {

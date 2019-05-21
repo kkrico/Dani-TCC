@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Dani_TCC.Core.GuardClause;
 
-namespace Dani_TCC.Core.Model.Algoritmo
+namespace Dani_TCC.Core.Models.Algoritmo
 {
     public class BuscaArquivoPorPattern : IBuscaArquivoPorPattern
     {
