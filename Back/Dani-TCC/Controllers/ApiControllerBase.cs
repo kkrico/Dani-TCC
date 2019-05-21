@@ -54,6 +54,12 @@ namespace Dani_TCC
             }
         }
 
+        public new IActionResult BadRequest()
+        {
+            NotifyModelStateErrors();
+            return Response();
+        }
+
         protected void NotifyError(string code, string message)
         {
             _mediator.RaiseEvent(new DomainNotification(code, message));

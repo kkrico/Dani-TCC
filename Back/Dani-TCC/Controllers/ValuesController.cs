@@ -25,6 +25,8 @@ namespace Dani_TCC.Controllers
         [HttpGet]
         public IActionResult Get()
         {
+            if (!ModelState.IsValid) return BadRequest();
+            
             return Response(new{TotalQuestoes = _questaoService.QuantidadeQuestoes()});
         }
 
