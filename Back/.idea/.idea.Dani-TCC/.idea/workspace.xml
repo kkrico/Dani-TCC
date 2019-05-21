@@ -4,10 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/Dani-TCC/Controllers/ValuesController.cs" line="19" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57701206-0be5-496d-a31d-03442fd6c296" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Dani-TCC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dani-TCC/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dani-TCC/Controllers/ValuesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dani-TCC/Controllers/ValuesController.cs" afterDir="false" />
-    </list>
+    <list default="true" id="57701206-0be5-496d-a31d-03442fd6c296" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Dani-TCC/Controllers/ValuesController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="368">
+              <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
               <folding>
                 <marker date="1558397157237" expanded="false" signature="6:200" ph="..." />
                 <marker date="1558397157237" expanded="true" signature="232:1350" ph="{...}" />
@@ -275,7 +272,7 @@
       <workItem from="1558307026838" duration="887000" />
       <workItem from="1558349684298" duration="2180000" />
       <workItem from="1558368358409" duration="2996000" />
-      <workItem from="1558395316305" duration="1842000" />
+      <workItem from="1558395316305" duration="2067000" />
     </task>
     <task id="LOCAL-00001" summary="Adicionado Swagger&#10;Criado infraestrutura minima">
       <created>1558370618045</created>
@@ -305,11 +302,25 @@
       <option name="project" value="LOCAL" />
       <updated>1558397116391</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Estrutura minima do projeto&#10;Banco conectado&#10;Removido validação sem sentido">
+      <created>1558397180518</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1558397180518</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Estrutura minima do projeto&#10;Banco conectado&#10;Removido validação sem sentido">
+      <created>1558397224601</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1558397224601</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10952000" />
+    <option name="totallyTimeSpent" value="11177000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -322,7 +333,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="-7" width="1476" height="878" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25776836" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -332,17 +342,17 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3297587" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3994638" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3994638" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3297587" />
       <window_info anchor="bottom" id="NuGet" order="7" sideWeight="0.49858758" weight="0.3297587" />
       <window_info anchor="bottom" id="Performance Profiler" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3297587" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Unit Tests" order="12" />
-      <window_info anchor="bottom" id="Terminal" order="13" />
+      <window_info anchor="bottom" id="Terminal" order="13" weight="0.3297587" />
       <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.50141245" side_tool="true" weight="0.3297587" />
       <window_info anchor="bottom" id="REST Client" order="15" weight="0.3297587" />
       <window_info anchor="bottom" id="Build" order="16" weight="0.3297587" />
@@ -364,7 +374,8 @@
     <MESSAGE value="Adicionado Swagger&#10;Criado infraestrutura minima" />
     <MESSAGE value="Adicionado Swagger&#10;Criado infraestrutura minima&#10;Colocado docker" />
     <MESSAGE value="Adicionado Swagger&#10;Criado infraestrutura minima&#10;Colocado docker&#10;Estrutura de banco" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionado Swagger&#10;Criado infraestrutura minima&#10;Colocado docker&#10;Estrutura de banco" />
+    <MESSAGE value="Estrutura minima do projeto&#10;Banco conectado&#10;Removido validação sem sentido" />
+    <option name="LAST_COMMIT_MESSAGE" value="Estrutura minima do projeto&#10;Banco conectado&#10;Removido validação sem sentido" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -730,8 +741,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Dani-TCC/Controllers/ValuesController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="368">
+          <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
           <folding>
             <marker date="1558397157237" expanded="false" signature="6:200" ph="..." />
             <marker date="1558397157237" expanded="true" signature="232:1350" ph="{...}" />
