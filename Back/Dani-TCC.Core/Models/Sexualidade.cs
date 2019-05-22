@@ -1,10 +1,13 @@
+using System.ComponentModel;
+
 namespace Dani_TCC.Core.Models
 {
     public enum Sexualidade
     {
-        Hetero,
-        Bissexual,
-        Homossexual,
-        Outros
+        [Description("Hétero")]
+        Hetero = 1,
+        Bissexual = 2,
+        Homossexual = 3,
+        Outros = 4
     }
 }

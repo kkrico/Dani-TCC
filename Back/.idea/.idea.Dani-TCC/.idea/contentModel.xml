@@ -17,7 +17,8 @@
         </e>
         <e p="Controllers" t="Include">
           <e p="ApiControllerBase.cs" t="Include" />
-          <e p="EtniaController.cs" t="Include" />
+          <e p="QuestionarioController.cs" t="Include" />
+          <e p="SocieEconomicoController.cs" t="Include" />
         </e>
         <e p="Dani-TCC.csproj" t="IncludeRecursive" />
         <e p="IOC" t="Include">
@@ -88,8 +89,8 @@
         <e p="Services" t="Include">
           <e p="EnumeService.cs" t="Include" />
           <e p="IEnumService.cs" t="Include" />
-          <e p="IQuestaoService.cs" t="Include" />
-          <e p="QuestaoService.cs" t="Include" />
+          <e p="IQuestionarioService.cs" t="Include" />
+          <e p="QuestionarioService.cs" t="Include" />
         </e>
         <e p="ViewModels" t="Include">
           <e p="EnumViewModel.cs" t="Include" />

@@ -5,14 +5,14 @@ namespace Dani_TCC.Core.Models
     public enum Etnia
     {
         [Description("Branca (o)")]
-        Branca,
+        Branca = 1,
         [Description("Parda (o)")]
-        Parda,
+        Parda = 2,
         [Description("Negra (o)")]
-        Negra,
+        Negra = 3,
         [Description("Indígena (o)")]
-        Indigena,
+        Indigena = 4,
         [Description("Outra (o)")]
-        Outra
+        Outra = 5
     }
 }

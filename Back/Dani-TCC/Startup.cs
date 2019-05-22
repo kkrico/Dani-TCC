@@ -25,7 +25,8 @@ namespace Dani_TCC
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            
+
+           
             services.AddWebApi(options =>
             {
                 options.OutputFormatters.Remove(new XmlDataContractSerializerOutputFormatter());
@@ -70,6 +71,13 @@ namespace Dani_TCC
             {
                 app.UseHsts();
             }
+            
+            app.UseCors(c =>
+            {
+                c.AllowAnyHeader();
+                c.AllowAnyMethod();
+                c.AllowAnyOrigin();
+            });
            
             app.UseHttpsRedirection();
             app.UseMvc();

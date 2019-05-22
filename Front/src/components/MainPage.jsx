@@ -7,13 +7,12 @@ const getAll = (uris) => {
     return uris.map(uri => API.get(socieeconomico + "/" + uri));
 }
 
-const Select = ({ itens, label }) => {
-
+const Select = ({ itens, label, onChange, name }) => {
     return <div className="field">
         <label className="label shadow">{label && label + " :"}</label>
-        <div className="select">
-            <select>
-                <option>Selecione</option>
+        <div className="select" onChange={onChange}>
+            <select name={name}>
+                <option value="">Selecione</option>
                 {
                     itens.map(item => <option key={item.id} value={item.id}>{item.description}</option>)
                 }
@@ -34,8 +33,42 @@ export class MainPage extends React.Component {
             faixaetaria: [],
             rendafamiliar: [],
             sexualidade: [],
-            loading: false
+            loading: false,
+            questionarioSocioEconomico: {
+                etnia: null,
+                genero: null,
+                faixaetaria: null,
+                rendafamiliar: null,
+                sexualidade: null,
+            }
         }
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handlePost = this.handlePost.bind(this);
+    }
+
+    handleChange(item) {
+
+        const { questionarioSocioEconomico } = this.state;
+
+        if (item.target.value === "")
+            questionarioSocioEconomico[item.target.name] = null;
+        else
+            questionarioSocioEconomico[item.target.name] = parseInt(item.target.value);
+
+        this.setState({
+            questionarioSocioEconomico
+        })
+    }
+
+    handlePost(evt) {
+
+        evt.preventDefault();
+        debugger;
+
+        API
+            .post("/questionario", this.state.questionarioSocioEconomico);
+        return false;
     }
 
     componentDidMount() {
@@ -76,30 +109,30 @@ export class MainPage extends React.Component {
                                 </p>
                                 <p className="subtitle shadow is-marginless">Dados socieconomicos: (opcionais) </p>
                                 <br />
-                                <form>
+                                <form method="POST" onSubmit={this.handlePost}>
                                     <div className="columns">
                                         <div className="column">
-                                            <Select itens={this.state.etnia} label="Etnia" />
+                                            <Select itens={this.state.etnia} name="etnia" label="Etnia" onChange={this.handleChange} />
                                         </div>
                                         <div className="column">
-                                            <Select itens={this.state.genero} label="Genero"></Select>
+                                            <Select itens={this.state.genero} name="genero" label="Genero" onChange={this.handleChange}></Select>
                                         </div>
                                         <div className="column">
-                                            <Select itens={this.state.faixaetaria} label="Faixa Etária"></Select>
+                                            <Select itens={this.state.faixaetaria} name="faixaetaria" label="Faixa Etária" onChange={this.handleChange}></Select>
                                         </div>
                                         <div className="column">
-                                            <Select itens={this.state.rendafamiliar} label="Renda Familiar"></Select>
+                                            <Select itens={this.state.rendafamiliar} name="rendafamiliar" label="Renda Familiar" onChange={this.handleChange}></Select>
                                         </div>
                                         <div className="column">
-                                            <Select itens={this.state.sexualidade} label="Sexualidade"></Select>
+                                            <Select itens={this.state.sexualidade} label="Sexualidade" name="sexualidade" onChange={this.handleChange}></Select>
                                         </div>
                                     </div>
-                                    <a className="button is-large is-fullwidth" href="https://github.com/aldi/awesome-bulma-templates">
+                                    <button type="submit" className="button is-large is-fullwidth" href="https://github.com/aldi/awesome-bulma-templates">
                                         <span className="icon is-medium">
                                             <i className="far fa-bell"></i>
                                         </span>
                                         <span>Começar o teste</span>
-                                    </a>
+                                    </button>
                                     <br />
                                 </form>
                             </div>

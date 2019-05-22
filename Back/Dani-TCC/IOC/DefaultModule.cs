@@ -21,13 +21,13 @@ namespace Dani_TCC
                 return t => componentContext.Resolve(t);
             });
 
-            builder.RegisterAssemblyTypes(typeof(QuestaoService).Assembly)
+            builder.RegisterAssemblyTypes(typeof(QuestionarioService).Assembly)
                 .PublicOnly()
                 .Where(e => e.Name.EndsWith("Service"))
                 .InstancePerLifetimeScope()
                 .AsImplementedInterfaces();
             
-            builder.RegisterType<QuestaoService>().As<IQuestaoService>();
+            builder.RegisterType<QuestionarioService>().As<IQuestionarioService>();
             builder.RegisterType<InMemoryMediatorHandler>().As<IMediatorHandler>();
             builder.RegisterType<DomainNotificationHandler>().As<INotificationHandler<DomainNotification>>();
         }
