@@ -1,6 +1,6 @@
 using System.ComponentModel;
 
-namespace Dani_TCC.Core.Models
+namespace Dani_TCC.Core.Models.Enums
 {
     public enum Sexualidade
     {

@@ -1,8 +1,8 @@
 using System.ComponentModel;
 
-namespace Dani_TCC.Core.Models
+namespace Dani_TCC.Core.Models.Enums
 {
-    public enum FaixaEtaria
+    public enum AgeGroup
     {
         [Description("Entre 18 e 20 anos")]
         Entre18Ate20 = 1,

@@ -1,17 +1,15 @@
 ﻿using System.Collections.Generic;
 
-namespace Dani_TCC.Core.Models.Algoritmo
+namespace Dani_TCC.Core.Models.Algorithm
 {
-    public interface IBuscaArquivoPorPattern
+    public interface IPatternFileSearchAlgorithm
     {
         string Pattern { get; }
 
         /// <summary>
         ///     Busca, na pasta citada e nas pastas filhas, de maneira recursiva, todas os arquivos do pattern informado
         /// </summary>
-        /// <param name="pasta"></param>
-        /// <param name="pattern"></param>
         /// <returns></returns>
-        IEnumerable<string> BuscarNaPasta(string pasta);
+        IEnumerable<string> GetFileContentsOnFolder(string folder);
     }
 }

@@ -2,6 +2,7 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Dani_TCC.Configurations;
+using Dani_TCC.Filters;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -14,19 +15,27 @@ namespace Dani_TCC
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IHostingEnvironment hostingEnvironment)
         {
             Configuration = configuration;
+            HostingEnvironment = hostingEnvironment;
         }
         
         public IConfiguration Configuration { get; }
+        public IHostingEnvironment HostingEnvironment { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-           
+            PhotoScanSettings photoScanSettings = Configuration
+                                                      .GetSection(nameof(PhotoScanSettings))
+                                                      .Get<PhotoScanSettings>() ?? throw new Exception("Photo Settings null");
+            
+            if (HostingEnvironment.IsDevelopment() && photoScanSettings.ShouldScan)
+                services.AddHostedService<PhotoScanHostedService>();
+                       
             services.AddWebApi(options =>
             {
                 options.OutputFormatters.Remove(new XmlDataContractSerializerOutputFormatter());

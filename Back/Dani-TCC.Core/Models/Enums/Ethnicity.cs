@@ -1,8 +1,8 @@
 using System.ComponentModel;
 
-namespace Dani_TCC.Core.Models
+namespace Dani_TCC.Core.Models.Enums
 {
-    public enum Etnia
+    public enum Ethnicity
     {
         [Description("Branca (o)")]
         Branca = 1,

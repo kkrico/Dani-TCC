@@ -1,46 +1,9 @@
-using System;
 using System.Linq;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
-using Microsoft.AspNetCore.Mvc.Internal;
 using Microsoft.AspNetCore.Mvc.Routing;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace Dani_TCC.Configurations
 {
-    public static class WebApiServiceCollectionExtensions
-    {
-        public static IMvcBuilder AddWebApi(this IServiceCollection services)
-        {
-            if (services == null) throw new ArgumentNullException(nameof(services));
-
-            var builder = services.AddMvcCore();
-            builder.AddJsonFormatters();
-            builder.AddApiExplorer();
-            builder.AddCors();
-
-            return new MvcBuilder(builder.Services, builder.PartManager);
-        }
-
-        public static IMvcBuilder AddWebApi(this IServiceCollection services, Action<MvcOptions> setupAction)
-        {
-            if (services == null) throw new ArgumentNullException(nameof(services));
-            if (setupAction == null) throw new ArgumentNullException(nameof(setupAction));
-
-            var builder = services.AddWebApi();
-            builder.Services.Configure(setupAction);
-
-            return builder;
-        }
-    }
-    
-    public static class MvcOptionsExtensions
-    {
-        public static void UseCentralRoutePrefix(this MvcOptions opts, IRouteTemplateProvider routeAttribute)
-        {
-            opts.Conventions.Insert(0, new RouteConvention(routeAttribute));
-        }
-    }
     public class RouteConvention : IApplicationModelConvention
     {
         private readonly AttributeRouteModel _centralPrefix;

@@ -5,56 +5,57 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Dani_TCC.Core.GuardClause;
+using Dani_TCC.Core.Models.Enums;
 
-namespace Dani_TCC.Core.Models.Algoritmo
+namespace Dani_TCC.Core.Models.Algorithm
 {
-    public class BuscaArquivoPorPattern : IBuscaArquivoPorPattern
+    public class PatternFileSearchAlgorithmFileSearchAlgorithm : IPatternFileSearchAlgorithm
     {
-        private readonly TipoParse _tipoParse;
-        private ConcurrentBag<string> _arquivosEncontrados;
+        private readonly ParseType _parseType;
+        private ConcurrentBag<string> _foundFiles;
 
-        public BuscaArquivoPorPattern(string pattern, TipoParse tipoParse)
+        public PatternFileSearchAlgorithmFileSearchAlgorithm(string pattern, ParseType parseType)
         {
-            _tipoParse = tipoParse;
+            _parseType = parseType;
             Guard.IsNotNull(pattern, nameof(pattern));
             Pattern = pattern;
-            _arquivosEncontrados = new ConcurrentBag<string>();
+            _foundFiles = new ConcurrentBag<string>();
         }
 
         public string Pattern { get; }
 
-        public IEnumerable<string> BuscarNaPasta(string pasta)
+        public IEnumerable<string> GetFileContentsOnFolder(string folder)
         {
-            Guard.IsNotNull(pasta, nameof(pasta));
+            Guard.IsNotNull(folder, nameof(folder));
             Guard.IsNotNull(Pattern, nameof(Pattern));
 
-            BuscarNasPastasEArquivos(pasta, Pattern);
+            SearchOnFoldersAndFiles(folder, Pattern);
 
-            List<string> resultado = _arquivosEncontrados.ToList();
+            List<string> resultado = _foundFiles.ToList();
             // Como esta kra é chamado em um contexto de singleton, eu limpo os encontrados
-            _arquivosEncontrados = new ConcurrentBag<string>();
+            _foundFiles = new ConcurrentBag<string>();
             return resultado;
         }
 
-        private void BuscarNasPastasEArquivos(string pasta, string pattern)
+        private void SearchOnFoldersAndFiles(string folder, string pattern)
         {
             Guard.IsNotNull(pattern, nameof(pattern));
-            Guard.IsNotNull(pasta, nameof(pasta));
+            Guard.IsNotNull(folder, nameof(folder));
 
             try
             {
-                pasta = Path.GetFullPath(pasta);
+                folder = Path.GetFullPath(folder);
             }
             catch (Exception e) when (e is PathTooLongException || e is UnauthorizedAccessException)
             {
             }
 
-            if (!Directory.Exists(pasta))
+            if (!Directory.Exists(folder))
                 return;
             try
             {
-                IEnumerable<string> arquivos = ObterArquivos(pasta);
-                Parallel.ForEach(arquivos, arquivo => { VerificarSeArquivoEncontrado(arquivo, pattern); });
+                IEnumerable<string> arquivos = GetFiles(folder);
+                Parallel.ForEach(arquivos, files => { CheckIfFileWasFound(files, pattern); });
             }
             catch (Exception e) when (e is PathTooLongException || e is UnauthorizedAccessException || e is IOException)
             {
@@ -62,8 +63,8 @@ namespace Dani_TCC.Core.Models.Algoritmo
 
             try
             {
-                IEnumerable<string> pastas = Directory.EnumerateDirectories(pasta);
-                Parallel.ForEach(pastas, p => { BuscarNasPastasEArquivos(p, pattern); });
+                IEnumerable<string> pastas = Directory.EnumerateDirectories(folder);
+                Parallel.ForEach(pastas, p => { SearchOnFoldersAndFiles(p, pattern); });
             }
             catch (Exception e) when (e is PathTooLongException || e is UnauthorizedAccessException || e is IOException)
             {
@@ -71,30 +72,30 @@ namespace Dani_TCC.Core.Models.Algoritmo
             }
         }
 
-        private IEnumerable<string> ObterArquivos(string pasta)
+        private IEnumerable<string> GetFiles(string pasta)
         {
-            if (_tipoParse == TipoParse.ParseRelativo)
+            if (_parseType == ParseType.ParseRelativo)
                 return Directory.EnumerateFiles(pasta).Where(file =>
                     file.IndexOf(Pattern, StringComparison.InvariantCultureIgnoreCase) >= 0);
 
             return Directory.EnumerateFiles(pasta, Pattern);
         }
 
-        private void VerificarSeArquivoEncontrado(string arquivo, string pattern)
+        private void CheckIfFileWasFound(string arquivo, string pattern)
         {
-            string nomeArquivo = Path.GetFileName(arquivo);
-            if (IsArquivoEncontrado(pattern, nomeArquivo))
-                AdicionarAosEncontrados(arquivo);
+            string fileName = Path.GetFileName(arquivo);
+            if (IsFileFound(pattern, fileName))
+                AddToFound(arquivo);
         }
 
-        private void AdicionarAosEncontrados(string arquivo)
+        private void AddToFound(string arquivo)
         {
-            _arquivosEncontrados.Add(Path.GetFullPath(arquivo));
+            _foundFiles.Add(Path.GetFullPath(arquivo));
         }
 
-        private bool IsArquivoEncontrado(string pattern, string nomeDoArquivo)
+        private bool IsFileFound(string pattern, string nomeDoArquivo)
         {
-            if (_tipoParse != TipoParse.ParseRelativo)
+            if (_parseType != ParseType.ParseRelativo)
                 return nomeDoArquivo.IndexOf(pattern, StringComparison.InvariantCultureIgnoreCase) == 0;
 
             var match = false;

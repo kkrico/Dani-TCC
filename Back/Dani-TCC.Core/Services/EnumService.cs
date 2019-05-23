@@ -6,7 +6,7 @@ using Dani_TCC.Core.ViewModels;
 
 namespace Dani_TCC.Core.Services
 {
-    public class EnumeService: IEnumService
+    public class EnumService: IEnumService
     {
         public IEnumerable<EnumViewModel> GetAll<T>() where T : struct
         {

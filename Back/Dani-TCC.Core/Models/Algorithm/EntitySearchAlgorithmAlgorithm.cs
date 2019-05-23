@@ -6,18 +6,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using Dani_TCC.Core.GuardClause;
 
-namespace Dani_TCC.Core.Models.Algoritmo
+namespace Dani_TCC.Core.Models.Algorithm
 {
-    public class BuscaEntidade<T> : IBuscaEntidade<T> where T : class
+    public class EntitySearchAlgorithmAlgorithm<T> : IEntitySearchAlgorithm<T> where T : class
     {
-        private readonly IBuscaArquivoPorPattern _buscaArquivoPorPattern;
-        private readonly IParseArquivo<T> _parseArquivo;
+        private readonly IPatternFileSearchAlgorithm _patternFileSearchAlgorithm;
+        private readonly IFileParser<T> _fileParser;
 
-        public BuscaEntidade(IBuscaArquivoPorPattern buscaArquivoPorPattern,
-            IParseArquivo<T> parseArquivo)
+        public EntitySearchAlgorithmAlgorithm(IPatternFileSearchAlgorithm patternFileSearchAlgorithm,
+            IFileParser<T> fileParser)
         {
-            _buscaArquivoPorPattern = buscaArquivoPorPattern;
-            _parseArquivo = parseArquivo;
+            _patternFileSearchAlgorithm = patternFileSearchAlgorithm;
+            _fileParser = fileParser;
         }
 
         public IEnumerable<T> ListarEntidades(string pasta)
@@ -31,7 +31,7 @@ namespace Dani_TCC.Core.Models.Algoritmo
             bool pastaExiste = Directory.Exists(pasta);
             if (!pastaExiste) return resultado;
 
-            IEnumerable<string> localizacaoProvaveisEntidades = _buscaArquivoPorPattern.BuscarNaPasta(pasta);
+            IEnumerable<string> localizacaoProvaveisEntidades = _patternFileSearchAlgorithm.GetFileContentsOnFolder(pasta);
             if (localizacaoProvaveisEntidades == null)
                 return resultado;
 
@@ -61,7 +61,7 @@ namespace Dani_TCC.Core.Models.Algoritmo
                 localFisicoEntidadeNoDisco = Path.GetFullPath(localFisicoEntidadeNoDisco);
 
                 T arquivoInterpretado =
-                    _parseArquivo.Interpretar(localFisicoEntidadeNoDisco);
+                    _fileParser.Parse(localFisicoEntidadeNoDisco);
 
                 if (arquivoInterpretado != null)
                     arquivosEncontrados.Enqueue(arquivoInterpretado);
