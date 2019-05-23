@@ -46,62 +46,56 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dani-TCC/HostedServices/PhotoScanHostedService.cs">
+        <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/IPatternFileSearchAlgorithm.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+            <state relative-caret-position="64">
+              <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
               <folding>
-                <marker date="1558577952884" expanded="false" signature="6:321" ph="..." />
-                <marker date="1558577952884" expanded="true" signature="349:1476" ph="{...}" />
-                <marker date="1558577952884" expanded="true" signature="356:447" ph="/* ReSharper disable once ClassNeverInstantiated.Global ... */" />
-                <marker date="1558577952884" expanded="true" signature="503:1472" ph="{...}" />
-                <marker date="1558577952884" expanded="true" signature="518:620" ph="/* We need to inject the IServiceProvider so we can create ... */" />
-                <marker date="1558577952884" expanded="true" signature="753:821" ph="{...}" />
-                <marker date="1558577952884" expanded="true" signature="890:1319" ph="{...}" />
-                <marker date="1558577952884" expanded="true" signature="972:1257" ph="{...}" />
-                <marker date="1558577952884" expanded="true" signature="1387:1466" ph="{...}" />
+                <marker date="1558571477900" expanded="true" signature="75:439" ph="{...}" />
+                <marker date="1558571477900" expanded="true" signature="126:437" ph="{...}" />
+                <marker date="1558571477900" expanded="true" signature="174:363" ph="///     Busca, na pasta citada e nas pastas filhas, de maneira recursiva, todas os arquivos do pattern informado ... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dani-TCC/Startup.cs">
+        <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/PatternFileSearchAlgorithmFileSearchAlgorithm.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+            <state relative-caret-position="-336">
+              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
               <folding>
-                <marker date="1558574879547" expanded="false" signature="6:404" ph="..." />
-                <marker date="1558574879547" expanded="true" signature="424:3513" ph="{...}" />
-                <marker date="1558574879547" expanded="true" signature="451:3511" ph="{...}" />
-                <marker date="1558574879547" expanded="true" signature="550:666" ph="{...}" />
-                <marker date="1558574879547" expanded="true" signature="972:2641" ph="{...}" />
-                <marker date="1558574879547" expanded="true" signature="1441:1598" ph="{...}" />
-                <marker date="1558574879547" expanded="true" signature="1653:1863" ph="{...}" />
-                <marker date="1558574879547" expanded="true" signature="1919:2301" ph="{...}" />
-                <marker date="1558574879547" expanded="true" signature="1994:2285" ph="{...}" />
-                <marker date="1558574879547" expanded="true" signature="2829:3505" ph="{...}" />
-                <marker date="1558574879547" expanded="true" signature="2876:3162" ph="{...}" />
-                <marker date="1558574879547" expanded="true" signature="2962:3096" ph="{...}" />
-                <marker date="1558574879547" expanded="true" signature="3179:3238" ph="{...}" />
-                <marker date="1558574879547" expanded="true" signature="3280:3416" ph="{...}" />
+                <marker date="1558578256341" expanded="false" signature="6:217" ph="..." />
+                <marker date="1558578256341" expanded="true" signature="259:3758" ph="{...}" />
+                <marker date="1558578256341" expanded="true" signature="354:3756" ph="{...}" />
+                <marker date="1558578256341" expanded="true" signature="557:754" ph="{...}" />
+                <marker date="1558578256341" expanded="true" signature="869:1289" ph="{...}" />
+                <marker date="1558578256341" expanded="true" signature="1366:2539" ph="{...}" />
+                <marker date="1558578256341" expanded="true" signature="1505:1584" ph="{...}" />
+                <marker date="1558578256341" expanded="true" signature="1685:1713" ph="{...}" />
+                <marker date="1558578256341" expanded="true" signature="1797:1985" ph="{...}" />
+                <marker date="1558578256341" expanded="true" signature="2106:2134" ph="{...}" />
+                <marker date="1558578256341" expanded="true" signature="2151:2353" ph="{...}" />
+                <marker date="1558578256341" expanded="true" signature="2474:2529" ph="{...}" />
+                <marker date="1558578256341" expanded="true" signature="2599:2894" ph="{...}" />
+                <marker date="1558578256341" expanded="true" signature="2968:3130" ph="{...}" />
+                <marker date="1558578256341" expanded="true" signature="3179:3255" ph="{...}" />
+                <marker date="1558578256341" expanded="true" signature="3327:3750" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Dani-TCC/Modules/DefaultModule.cs">
+        <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/IFileParserAlgorithm.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
+            <state relative-caret-position="144">
+              <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
               <folding>
-                <marker date="1558578537469" expanded="false" signature="6:367" ph="..." />
-                <marker date="1558578537469" expanded="true" signature="387:2139" ph="{...}" />
-                <marker date="1558578537469" expanded="true" signature="429:2137" ph="{...}" />
-                <marker date="1558578537469" expanded="true" signature="606:2131" ph="{...}" />
-                <marker date="1558578537469" expanded="true" signature="672:834" ph="{...}" />
-                <marker date="1558578537469" expanded="true" signature="1769:1921" ph="{...}" />
+                <marker date="1558577067374" expanded="true" signature="40:363" ph="{...}" />
+                <marker date="1558577067374" expanded="true" signature="107:157" ph="{...}" />
+                <marker date="1558577067374" expanded="true" signature="225:361" ph="{...}" />
+                <marker date="1558577067374" expanded="true" signature="279:355" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -276,6 +270,12 @@
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="Dani-TCC" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Dani-TCC" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Extensions" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Dani-TCC" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Dani-TCC" type="24d0babc:SolutionExplorerModelNode" />
               <item name="HostedServices" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
@@ -283,6 +283,30 @@
               <item name="Dani-TCC" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Dani-TCC" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Modules" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Dani-TCC" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Dani-TCC.Core" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Dani-TCC" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Dani-TCC.Core" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Dani-TCC" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Dani-TCC.Core" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Algorithm" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Dani-TCC" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Dani-TCC.Core" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Services" type="24d0babc:SolutionExplorerModelNode" />
             </path>
           </expand>
           <select />
@@ -343,7 +367,7 @@
       <workItem from="1558368358409" duration="2996000" />
       <workItem from="1558395316305" duration="2067000" />
       <workItem from="1558551475594" duration="8731000" />
-      <workItem from="1558576050925" duration="2483000" />
+      <workItem from="1558576050925" duration="2702000" />
     </task>
     <task id="LOCAL-00001" summary="Adicionado Swagger&#10;Criado infraestrutura minima">
       <created>1558370618045</created>
@@ -433,7 +457,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30757000" />
+    <option name="totallyTimeSpent" value="30976000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -446,9 +470,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="-7" width="1476" height="878" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21257062" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21257062" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -457,7 +480,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3297587" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3994638" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3994638" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3297587" />
@@ -502,17 +525,17 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/PatternFileSearchAlgorithmFileSearchAlgorithm.cs</url>
-          <line>75</line>
-          <properties documentPath="$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/PatternFileSearchAlgorithmFileSearchAlgorithm.cs" initialLine="75">
+          <url>file://$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/IFileParserAlgorithm.cs</url>
+          <line>10</line>
+          <properties documentPath="$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/IFileParserAlgorithm.cs" initialLine="10">
             <startOffsets>
-              <option value="2608" />
+              <option value="288" />
             </startOffsets>
             <endOffsets>
-              <option value="2609" />
+              <option value="289" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="46" />
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -845,52 +868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3416F7F4-F4EC-454A-B354-95DE7423B688/48/a4cd1082/Thread.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="121" column="40" lean-forward="true" selection-start-line="121" selection-start-column="40" selection-end-line="121" selection-end-column="40" />
-          <folding>
-            <marker date="1558491706059" expanded="true" signature="0:329" ph="/* Decompiled with JetBrains decompiler ... */" />
-            <marker date="1558491706059" expanded="true" signature="539:7595" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="588:7593" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="1068:1080" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="1118:1260" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="1318:1606" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="1657:1799" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="1870:2158" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="2197:2245" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="2387:2635" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="2680:2884" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="2913:3147" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="3195:3340" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="3211:3267" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="3277:3334" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="3400:3557" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="3416:3478" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="3488:3551" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="3940:4001" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="4049:4359" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="4527:4582" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="4721:4770" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="4810:4896" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="4826:4890" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="5144:5453" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="5586:5629" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="5874:6158" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="5890:5951" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="5961:6152" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="6197:6477" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="6213:6272" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="6282:6471" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="6852:6939" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="6978:7031" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="7059:7443" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="7075:7119" ph="{...}" />
-            <marker date="1558491706059" expanded="true" signature="7129:7437" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Services/IEnumService.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
@@ -950,19 +927,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/IFileParserAlgorithm.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="55" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="55" />
-          <folding>
-            <marker date="1558577067374" expanded="true" signature="40:363" ph="{...}" />
-            <marker date="1558577067374" expanded="true" signature="107:157" ph="{...}" />
-            <marker date="1558577067374" expanded="true" signature="225:361" ph="{...}" />
-            <marker date="1558577067374" expanded="true" signature="279:355" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6AC88FF9-9817-4BE7-8F0D-6AB05B5F222B/03/8bd28f02/WebHostBuilder.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
@@ -1004,18 +968,6 @@
             <marker date="1558569250884" expanded="true" signature="13955:14044" ph="{...}" />
             <marker date="1558569250884" expanded="true" signature="14430:14732" ph="{...}" />
             <marker date="1558569250884" expanded="true" signature="14816:15052" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/IPatternFileSearchAlgorithm.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-          <folding>
-            <marker date="1558571477900" expanded="true" signature="75:439" ph="{...}" />
-            <marker date="1558571477900" expanded="true" signature="126:437" ph="{...}" />
-            <marker date="1558571477900" expanded="true" signature="174:363" ph="///     Busca, na pasta citada e nas pastas filhas, de maneira recursiva, todas os arquivos do pattern informado ... " />
           </folding>
         </state>
       </provider>
@@ -1120,68 +1072,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/PatternFileSearchAlgorithmFileSearchAlgorithm.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="78" column="79" selection-start-line="78" selection-start-column="79" selection-end-line="78" selection-end-column="79" />
-          <folding>
-            <marker date="1558578256341" expanded="false" signature="6:217" ph="..." />
-            <marker date="1558578256341" expanded="true" signature="259:3758" ph="{...}" />
-            <marker date="1558578256341" expanded="true" signature="354:3756" ph="{...}" />
-            <marker date="1558578256341" expanded="true" signature="557:754" ph="{...}" />
-            <marker date="1558578256341" expanded="true" signature="869:1289" ph="{...}" />
-            <marker date="1558578256341" expanded="true" signature="1366:2539" ph="{...}" />
-            <marker date="1558578256341" expanded="true" signature="1505:1584" ph="{...}" />
-            <marker date="1558578256341" expanded="true" signature="1685:1713" ph="{...}" />
-            <marker date="1558578256341" expanded="true" signature="1797:1985" ph="{...}" />
-            <marker date="1558578256341" expanded="true" signature="2106:2134" ph="{...}" />
-            <marker date="1558578256341" expanded="true" signature="2151:2353" ph="{...}" />
-            <marker date="1558578256341" expanded="true" signature="2474:2529" ph="{...}" />
-            <marker date="1558578256341" expanded="true" signature="2599:2894" ph="{...}" />
-            <marker date="1558578256341" expanded="true" signature="2968:3130" ph="{...}" />
-            <marker date="1558578256341" expanded="true" signature="3179:3255" ph="{...}" />
-            <marker date="1558578256341" expanded="true" signature="3327:3750" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Services/IPhotoService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
-          <folding>
-            <marker date="1558578085381" expanded="false" signature="6:136" ph="..." />
-            <marker date="1558578085381" expanded="true" signature="170:833" ph="{...}" />
-            <marker date="1558578085381" expanded="true" signature="207:260" ph="{...}" />
-            <marker date="1558578085381" expanded="true" signature="310:831" ph="{...}" />
-            <marker date="1558578085381" expanded="true" signature="567:679" ph="{...}" />
-            <marker date="1558578085381" expanded="true" signature="735:825" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A5FEC2C8-82E9-4A15-9003-A15263F5D528/f6/e3279685/Parallel.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="1056" column="20" selection-start-line="1056" selection-start-column="20" selection-end-line="1056" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dani-TCC/HostedServices/PhotoScanHostedService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
-          <folding>
-            <marker date="1558577952884" expanded="false" signature="6:321" ph="..." />
-            <marker date="1558577952884" expanded="true" signature="349:1476" ph="{...}" />
-            <marker date="1558577952884" expanded="true" signature="356:447" ph="/* ReSharper disable once ClassNeverInstantiated.Global ... */" />
-            <marker date="1558577952884" expanded="true" signature="503:1472" ph="{...}" />
-            <marker date="1558577952884" expanded="true" signature="518:620" ph="/* We need to inject the IServiceProvider so we can create ... */" />
-            <marker date="1558577952884" expanded="true" signature="753:821" ph="{...}" />
-            <marker date="1558577952884" expanded="true" signature="890:1319" ph="{...}" />
-            <marker date="1558577952884" expanded="true" signature="972:1257" ph="{...}" />
-            <marker date="1558577952884" expanded="true" signature="1387:1466" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1219,6 +1113,135 @@
             <marker date="1558578537469" expanded="true" signature="606:2131" ph="{...}" />
             <marker date="1558578537469" expanded="true" signature="672:834" ph="{...}" />
             <marker date="1558578537469" expanded="true" signature="1769:1921" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3416F7F4-F4EC-454A-B354-95DE7423B688/48/a4cd1082/Thread.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="115" column="7" lean-forward="true" selection-start-line="115" selection-start-column="7" selection-end-line="115" selection-end-column="7" />
+          <folding>
+            <marker date="1558491706059" expanded="true" signature="0:329" ph="/* Decompiled with JetBrains decompiler ... */" />
+            <marker date="1558491706059" expanded="true" signature="539:7595" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="588:7593" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="1068:1080" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="1118:1260" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="1318:1606" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="1657:1799" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="1870:2158" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="2197:2245" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="2387:2635" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="2680:2884" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="2913:3147" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="3195:3340" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="3211:3267" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="3277:3334" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="3400:3557" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="3416:3478" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="3488:3551" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="3940:4001" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="4049:4359" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="4527:4582" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="4721:4770" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="4810:4896" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="4826:4890" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="5144:5453" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="5586:5629" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="5874:6158" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="5890:5951" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="5961:6152" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="6197:6477" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="6213:6272" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="6282:6471" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="6852:6939" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="6978:7031" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="7059:7443" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="7075:7119" ph="{...}" />
+            <marker date="1558491706059" expanded="true" signature="7129:7437" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Services/IPhotoService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="25" column="53" lean-forward="true" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
+          <folding>
+            <marker date="1558578085381" expanded="false" signature="6:136" ph="..." />
+            <marker date="1558578085381" expanded="true" signature="170:833" ph="{...}" />
+            <marker date="1558578085381" expanded="true" signature="207:260" ph="{...}" />
+            <marker date="1558578085381" expanded="true" signature="310:831" ph="{...}" />
+            <marker date="1558578085381" expanded="true" signature="567:679" ph="{...}" />
+            <marker date="1558578085381" expanded="true" signature="735:825" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dani-TCC/HostedServices/PhotoScanHostedService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="33" column="31" lean-forward="true" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+          <folding>
+            <marker date="1558577952884" expanded="false" signature="6:321" ph="..." />
+            <marker date="1558577952884" expanded="true" signature="349:1476" ph="{...}" />
+            <marker date="1558577952884" expanded="true" signature="356:447" ph="/* ReSharper disable once ClassNeverInstantiated.Global ... */" />
+            <marker date="1558577952884" expanded="true" signature="503:1472" ph="{...}" />
+            <marker date="1558577952884" expanded="true" signature="518:620" ph="/* We need to inject the IServiceProvider so we can create ... */" />
+            <marker date="1558577952884" expanded="true" signature="753:821" ph="{...}" />
+            <marker date="1558577952884" expanded="true" signature="890:1319" ph="{...}" />
+            <marker date="1558577952884" expanded="true" signature="972:1257" ph="{...}" />
+            <marker date="1558577952884" expanded="true" signature="1387:1466" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/IPatternFileSearchAlgorithm.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+          <folding>
+            <marker date="1558571477900" expanded="true" signature="75:439" ph="{...}" />
+            <marker date="1558571477900" expanded="true" signature="126:437" ph="{...}" />
+            <marker date="1558571477900" expanded="true" signature="174:363" ph="///     Busca, na pasta citada e nas pastas filhas, de maneira recursiva, todas os arquivos do pattern informado ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/PatternFileSearchAlgorithmFileSearchAlgorithm.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-336">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <marker date="1558578256341" expanded="false" signature="6:217" ph="..." />
+            <marker date="1558578256341" expanded="true" signature="259:3758" ph="{...}" />
+            <marker date="1558578256341" expanded="true" signature="354:3756" ph="{...}" />
+            <marker date="1558578256341" expanded="true" signature="557:754" ph="{...}" />
+            <marker date="1558578256341" expanded="true" signature="869:1289" ph="{...}" />
+            <marker date="1558578256341" expanded="true" signature="1366:2539" ph="{...}" />
+            <marker date="1558578256341" expanded="true" signature="1505:1584" ph="{...}" />
+            <marker date="1558578256341" expanded="true" signature="1685:1713" ph="{...}" />
+            <marker date="1558578256341" expanded="true" signature="1797:1985" ph="{...}" />
+            <marker date="1558578256341" expanded="true" signature="2106:2134" ph="{...}" />
+            <marker date="1558578256341" expanded="true" signature="2151:2353" ph="{...}" />
+            <marker date="1558578256341" expanded="true" signature="2474:2529" ph="{...}" />
+            <marker date="1558578256341" expanded="true" signature="2599:2894" ph="{...}" />
+            <marker date="1558578256341" expanded="true" signature="2968:3130" ph="{...}" />
+            <marker date="1558578256341" expanded="true" signature="3179:3255" ph="{...}" />
+            <marker date="1558578256341" expanded="true" signature="3327:3750" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/IFileParserAlgorithm.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+          <folding>
+            <marker date="1558577067374" expanded="true" signature="40:363" ph="{...}" />
+            <marker date="1558577067374" expanded="true" signature="107:157" ph="{...}" />
+            <marker date="1558577067374" expanded="true" signature="225:361" ph="{...}" />
+            <marker date="1558577067374" expanded="true" signature="279:355" ph="{...}" />
           </folding>
         </state>
       </provider>
