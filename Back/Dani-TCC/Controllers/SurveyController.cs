@@ -1,6 +1,7 @@
 using Dani_TCC.Core.EventHandlers;
 using Dani_TCC.Core.Events;
 using Dani_TCC.Core.Services;
+using Dani_TCC.Core.ViewModels;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

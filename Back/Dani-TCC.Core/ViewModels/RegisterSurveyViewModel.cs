@@ -1,4 +1,4 @@
-namespace Dani_TCC.Core.Services
+namespace Dani_TCC.Core.ViewModels
 {
     public class RegisterSurveyViewModel
     {

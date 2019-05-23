@@ -1,3 +1,5 @@
+using Dani_TCC.Core.ViewModels;
+
 namespace Dani_TCC.Core.Services
 {
     public interface ISurveyService
