@@ -54,7 +54,7 @@ namespace Dani_TCC
                     new NamedParameter("pattern", "jpg"), 
                     new NamedParameter("parseType", ParseType.Relative), 
                 });
-            builder.RegisterType<PhotoFileParser>().As<IFileParserAlgorithm<Photo>>();
+            builder.RegisterType<PhotoFileParserAlgorithm>().As<IFileParserAlgorithm<Photo>>();
             builder.RegisterType<EntitySearchAlgorithmAlgorithm<Photo>>().As<IEntitySearchAlgorithm<Photo>>();
         }
     }

@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\ramos\\Desktop\\Dani\\Back\\Dani-TCC\\Dani-TCC.csproj",
+    "projectUniqueName": "D:\\X\\KK\\Dani-TCC\\Back\\Dani-TCC\\Dani-TCC.csproj",
     "projectName": "Dani-TCC",
-    "projectPath": "C:\\Users\\ramos\\Desktop\\Dani\\Back\\Dani-TCC\\Dani-TCC.csproj",
-    "outputPath": "C:\\Users\\ramos\\Desktop\\Dani\\Back\\Dani-TCC\\obj\\",
+    "projectPath": "D:\\X\\KK\\Dani-TCC\\Back\\Dani-TCC\\Dani-TCC.csproj",
+    "outputPath": "D:\\X\\KK\\Dani-TCC\\Back\\Dani-TCC\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -15,8 +15,8 @@
     "frameworks": {
       "netcoreapp2.1": {
         "projectReferences": {
-          "C:\\Users\\ramos\\Desktop\\Dani\\Back\\Dani-TCC.Core\\Dani-TCC.Core.csproj": {
-            "projectPath": "C:\\Users\\ramos\\Desktop\\Dani\\Back\\Dani-TCC.Core\\Dani-TCC.Core.csproj"
+          "D:\\X\\KK\\Dani-TCC\\Back\\Dani-TCC.Core\\Dani-TCC.Core.csproj": {
+            "projectPath": "D:\\X\\KK\\Dani-TCC\\Back\\Dani-TCC.Core\\Dani-TCC.Core.csproj"
           }
         }
       }
