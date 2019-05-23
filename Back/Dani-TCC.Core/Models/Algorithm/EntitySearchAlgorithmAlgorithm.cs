@@ -20,26 +20,26 @@ namespace Dani_TCC.Core.Models.Algorithm
             _fileParser = fileParser;
         }
 
-        public IEnumerable<T> ListarEntidades(string pasta)
+        public IEnumerable<T> ListEntities(string folder)
         {
             var resultado = new ConcurrentStack<T>();
-            if (string.IsNullOrEmpty(pasta))
+            if (string.IsNullOrEmpty(folder))
                 return resultado;
 
-            pasta = pasta.Trim();
+            folder = folder.Trim();
 
-            bool pastaExiste = Directory.Exists(pasta);
+            bool pastaExiste = Directory.Exists(folder);
             if (!pastaExiste) return resultado;
 
-            IEnumerable<string> localizacaoProvaveisEntidades = _patternFileSearchAlgorithm.GetFileContentsOnFolder(pasta);
-            if (localizacaoProvaveisEntidades == null)
+            IEnumerable<string> probablyFilesLocation = _patternFileSearchAlgorithm.GetFileContentsOnFolder(folder);
+            if (probablyFilesLocation == null)
                 return resultado;
 
-            IEnumerable<T> entidades = Interpretar(localizacaoProvaveisEntidades);
-            return entidades?.Where(e => e != null) ?? resultado;
+            IEnumerable<T> entities = Parse(probablyFilesLocation);
+            return entities?.Where(e => e != null) ?? resultado;
         }
 
-        private IEnumerable<T> Interpretar(IEnumerable<string> localizacaoProvavelEntidade)
+        private IEnumerable<T> Parse(IEnumerable<string> localizacaoProvavelEntidade)
         {
             Guard.IsNotNull(localizacaoProvavelEntidade, nameof(localizacaoProvavelEntidade));
 
@@ -51,7 +51,7 @@ namespace Dani_TCC.Core.Models.Algorithm
             return arquivosEncontrados.Where(web => web != null);
         }
 
-        private Action<string> TentarExtrairEntidade(ConcurrentQueue<T> arquivosEncontrados)
+        private Action<string> TentarExtrairEntidade(ConcurrentQueue<T> foundFiles)
         {
             return localFisicoEntidadeNoDisco =>
             {
@@ -60,11 +60,11 @@ namespace Dani_TCC.Core.Models.Algorithm
                 localFisicoEntidadeNoDisco = localFisicoEntidadeNoDisco.Trim();
                 localFisicoEntidadeNoDisco = Path.GetFullPath(localFisicoEntidadeNoDisco);
 
-                T arquivoInterpretado =
+                T parsedFile =
                     _fileParser.Parse(localFisicoEntidadeNoDisco);
 
-                if (arquivoInterpretado != null)
-                    arquivosEncontrados.Enqueue(arquivoInterpretado);
+                if (parsedFile != null)
+                    foundFiles.Enqueue(parsedFile);
             };
         }
     }

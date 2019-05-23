@@ -74,7 +74,7 @@ namespace Dani_TCC.Core.Models.Algorithm
 
         private IEnumerable<string> GetFiles(string pasta)
         {
-            if (_parseType == ParseType.ParseRelativo)
+            if (_parseType == ParseType.Relative)
                 return Directory.EnumerateFiles(pasta).Where(file =>
                     file.IndexOf(Pattern, StringComparison.InvariantCultureIgnoreCase) >= 0);
 
@@ -95,7 +95,7 @@ namespace Dani_TCC.Core.Models.Algorithm
 
         private bool IsFileFound(string pattern, string nomeDoArquivo)
         {
-            if (_parseType != ParseType.ParseRelativo)
+            if (_parseType != ParseType.Relative)
                 return nomeDoArquivo.IndexOf(pattern, StringComparison.InvariantCultureIgnoreCase) == 0;
 
             var match = false;

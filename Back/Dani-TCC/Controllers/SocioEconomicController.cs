@@ -45,14 +45,14 @@ namespace Dani_TCC.Controllers
         [Route("rendafamiliar")]
         public IActionResult GetRendaFamiliar()
         {
-            return Response(_enumService.GetAll<RendaFamiliar>());
+            return Response(_enumService.GetAll<FamilyIncome>());
         }
         
         [HttpGet]
         [Route("sexualidade")]
         public IActionResult GetSexualidade()
         {
-            return Response(_enumService.GetAll<Sexualidade>());
+            return Response(_enumService.GetAll<Sexuality>());
         }
     }
 }

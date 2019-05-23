@@ -75,10 +75,10 @@
           <e p="Enums" t="Include">
             <e p="AgeGroup.cs" t="Include" />
             <e p="Ethnicity.cs" t="Include" />
+            <e p="FamilyIncome.cs" t="Include" />
             <e p="Gender.cs" t="Include" />
             <e p="ParseType.cs" t="Include" />
-            <e p="RendaFamiliar.cs" t="Include" />
-            <e p="Sexualidade.cs" t="Include" />
+            <e p="Sexuality.cs" t="Include" />
           </e>
         </e>
         <e p="obj" t="ExcludeRecursive">

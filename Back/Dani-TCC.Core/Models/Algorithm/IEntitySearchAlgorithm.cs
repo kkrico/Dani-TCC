@@ -8,6 +8,6 @@ namespace Dani_TCC.Core.Models.Algorithm
     /// <typeparam name="T"></typeparam>
     internal interface IEntitySearchAlgorithm<out T>
     {
-        IEnumerable<T> ListarEntidades(string pasta);
+        IEnumerable<T> ListEntities(string folder);
     }
 }

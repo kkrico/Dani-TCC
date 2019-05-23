@@ -1,8 +1,12 @@
+using System.ComponentModel;
+
 namespace Dani_TCC.Core.Models.Enums
 {
     public enum Gender
     {
-        Masculino = 1,
-        Feminino = 2
+        [Description("Masculino")]
+        Male = 1,
+        [Description("Feminino")]
+        Female = 2
     }
 }
