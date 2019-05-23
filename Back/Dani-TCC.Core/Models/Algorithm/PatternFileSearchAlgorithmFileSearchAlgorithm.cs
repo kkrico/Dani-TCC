@@ -38,7 +38,7 @@ namespace Dani_TCC.Core.Models.Algorithm
         }
 
         private void SearchOnFoldersAndFiles(string folder, string pattern)
-        {
+            {
             Guard.IsNotNull(pattern, nameof(pattern));
             Guard.IsNotNull(folder, nameof(folder));
 

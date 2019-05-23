@@ -1,6 +1,7 @@
 using Dani_TCC.Core.EventHandlers;
 using Dani_TCC.Core.Events;
 using Dani_TCC.Core.Models;
+using Dani_TCC.Core.Models.Algorithm;
 using Dani_TCC.Core.Models.Enums;
 using Dani_TCC.Core.Services;
 using MediatR;
@@ -15,7 +16,7 @@ namespace Dani_TCC.Controllers
         private readonly IEnumService _enumService;
 
         public SocioEconomicController(INotificationHandler<DomainNotification> notifications, 
-            IMediatorHandler mediator, IEnumService enumService) : base(notifications, mediator)
+            IMediatorHandler mediator, IEnumService enumService, IPhotoService photoService) : base(notifications, mediator)
         {
             _enumService = enumService;
         }

@@ -32,10 +32,13 @@ namespace Dani_TCC
             PhotoScanSettings photoScanSettings = Configuration
                                                       .GetSection(nameof(PhotoScanSettings))
                                                       .Get<PhotoScanSettings>() ?? throw new Exception("Photo Settings null");
-            
+
             if (HostingEnvironment.IsDevelopment() && photoScanSettings.ShouldScan)
+            {
+                services.AddScoped(c => photoScanSettings);
                 services.AddHostedService<PhotoScanHostedService>();
-                       
+            }
+            
             services.AddWebApi(options =>
             {
                 options.OutputFormatters.Remove(new XmlDataContractSerializerOutputFormatter());

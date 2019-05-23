@@ -1,6 +1,8 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Dani_TCC.Configurations;
+using Dani_TCC.Core.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -9,11 +11,14 @@ using Microsoft.Extensions.Hosting;
 
 namespace Dani_TCC.Filters
 {
+    // ReSharper disable once ClassNeverInstantiated.Global
+    // Instanciated over reflection
     public class PhotoScanHostedService: IHostedService
     {
         // We need to inject the IServiceProvider so we can create 
         // the scoped service, MyDbContext
         private readonly IServiceProvider _serviceProvider;
+
         public PhotoScanHostedService(IServiceProvider serviceProvider)
         {
             _serviceProvider = serviceProvider;
@@ -23,8 +28,10 @@ namespace Dani_TCC.Filters
         {
             using(IServiceScope scope = _serviceProvider.CreateScope())
             {
-                // Get the DbContext instance
-
+                var settings = scope.ServiceProvider.GetRequiredService<PhotoScanSettings>();
+                var service = scope.ServiceProvider.GetRequiredService<IPhotoService>();
+                
+                service.ParsePhotos(settings.Directory);
             }
             
             return Task.CompletedTask;

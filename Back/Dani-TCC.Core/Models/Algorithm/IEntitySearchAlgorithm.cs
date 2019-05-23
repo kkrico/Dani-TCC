@@ -6,7 +6,7 @@ namespace Dani_TCC.Core.Models.Algorithm
     ///     Dado determinado pasta, este algoritmo le os arquivos e extrai as entidades
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    internal interface IEntitySearchAlgorithm<out T>
+    public interface IEntitySearchAlgorithm<out T>
     {
         IEnumerable<T> ListEntities(string folder);
     }

@@ -69,7 +69,7 @@
           <e p="Algorithm" t="Include">
             <e p="EntitySearchAlgorithmAlgorithm.cs" t="Include" />
             <e p="IEntitySearchAlgorithm.cs" t="Include" />
-            <e p="IFileParser.cs" t="Include" />
+            <e p="IFileParserAlgorithm.cs" t="Include" />
             <e p="IPatternFileSearchAlgorithm.cs" t="Include" />
             <e p="PatternFileSearchAlgorithmFileSearchAlgorithm.cs" t="Include" />
           </e>
@@ -99,6 +99,7 @@
         <e p="Services" t="Include">
           <e p="EnumService.cs" t="Include" />
           <e p="IEnumService.cs" t="Include" />
+          <e p="IPhotoService.cs" t="Include" />
           <e p="ISurveyService.cs" t="Include" />
           <e p="SurveyService.cs" t="Include" />
         </e>

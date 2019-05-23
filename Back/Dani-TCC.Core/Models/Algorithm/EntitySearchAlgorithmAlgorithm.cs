@@ -11,13 +11,13 @@ namespace Dani_TCC.Core.Models.Algorithm
     public class EntitySearchAlgorithmAlgorithm<T> : IEntitySearchAlgorithm<T> where T : class
     {
         private readonly IPatternFileSearchAlgorithm _patternFileSearchAlgorithm;
-        private readonly IFileParser<T> _fileParser;
+        private readonly IFileParserAlgorithm<T> _fileParserAlgorithm;
 
         public EntitySearchAlgorithmAlgorithm(IPatternFileSearchAlgorithm patternFileSearchAlgorithm,
-            IFileParser<T> fileParser)
+            IFileParserAlgorithm<T> fileParserAlgorithm)
         {
             _patternFileSearchAlgorithm = patternFileSearchAlgorithm;
-            _fileParser = fileParser;
+            _fileParserAlgorithm = fileParserAlgorithm;
         }
 
         public IEnumerable<T> ListEntities(string folder)
@@ -61,7 +61,7 @@ namespace Dani_TCC.Core.Models.Algorithm
                 localFisicoEntidadeNoDisco = Path.GetFullPath(localFisicoEntidadeNoDisco);
 
                 T parsedFile =
-                    _fileParser.Parse(localFisicoEntidadeNoDisco);
+                    _fileParserAlgorithm.Parse(localFisicoEntidadeNoDisco);
 
                 if (parsedFile != null)
                     foundFiles.Enqueue(parsedFile);
