@@ -21,36 +21,36 @@ namespace Dani_TCC.Controllers
         }
 
         [HttpGet]
-        [Route("etnia")]
+        [Route("ethnicity")]
         public IActionResult GetEtnia()
         {
             return Response(_enumService.GetAll<Ethnicity>());
         }
         
         [HttpGet]
-        [Route("genero")]
-        public IActionResult GetGenero()
+        [Route("gender")]
+        public IActionResult GetGender()
         {
             return Response(_enumService.GetAll<Gender>());
         }
         
         [HttpGet]
-        [Route("faixaetaria")]
-        public IActionResult GetFaixaEtaria()
+        [Route("agegroup")]
+        public IActionResult GetAgeGroup()
         {
             return Response(_enumService.GetAll<AgeGroup>());
         }
         
         [HttpGet]
-        [Route("rendafamiliar")]
-        public IActionResult GetRendaFamiliar()
+        [Route("familyincome")]
+        public IActionResult GetFamilyIncome()
         {
             return Response(_enumService.GetAll<FamilyIncome>());
         }
         
         [HttpGet]
-        [Route("sexualidade")]
-        public IActionResult GetSexualidade()
+        [Route("sexuality")]
+        public IActionResult GetSexuality()
         {
             return Response(_enumService.GetAll<Sexuality>());
         }

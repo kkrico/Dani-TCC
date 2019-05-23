@@ -4,23 +4,19 @@
     <list default="true" id="57701206-0be5-496d-a31d-03442fd6c296" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dani-TCC/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dani-TCC/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dani-TCC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dani-TCC/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/EntitySearchAlgorithmAlgorithm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/EntitySearchAlgorithmAlgorithm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/IEntitySearchAlgorithm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/IEntitySearchAlgorithm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/PatternFileSearchAlgorithmFileSearchAlgorithm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/PatternFileSearchAlgorithmFileSearchAlgorithm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/AgeGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/AgeGroup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/Ethnicity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/Ethnicity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/Gender.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/Gender.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/ParseType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/ParseType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/RendaFamiliar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/FamilyIncome.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/Sexualidade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/Sexuality.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dani-TCC.Core/ViewModels/RegisterSurveyViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dani-TCC.Core/ViewModels/RegisterSurveyViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dani-TCC.Core/obj/Debug/netcoreapp2.1/Dani-TCC.Core.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Dani-TCC.Core/obj/Debug/netcoreapp2.1/Dani-TCC.Core.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dani-TCC/Controllers/SocioEconomicController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dani-TCC/Controllers/SocioEconomicController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dani-TCC/bin/Debug/netcoreapp2.1/Dani-TCC.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Dani-TCC/bin/Debug/netcoreapp2.1/Dani-TCC.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dani-TCC/bin/Debug/netcoreapp2.1/Dani-TCC.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Dani-TCC/bin/Debug/netcoreapp2.1/Dani-TCC.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dani-TCC/obj/Debug/netcoreapp2.1/Dani-TCC.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Dani-TCC/obj/Debug/netcoreapp2.1/Dani-TCC.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dani-TCC/obj/Debug/netcoreapp2.1/Dani-TCC.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Dani-TCC/obj/Debug/netcoreapp2.1/Dani-TCC.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dani-TCC/obj/Debug/netcoreapp2.1/Dani-TCC.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Dani-TCC/obj/Debug/netcoreapp2.1/Dani-TCC.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dani-TCC/obj/Debug/netcoreapp2.1/Dani-TCC.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Dani-TCC/obj/Debug/netcoreapp2.1/Dani-TCC.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Db/DaniTCC-Fisico.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Db/DaniTCC-Fisico.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Db/DaniTCC-Fisico.pdm" beforeDir="false" afterPath="$PROJECT_DIR$/../Db/DaniTCC-Fisico.pdm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Db/DaniTCC-Logico.ldb" beforeDir="false" afterPath="$PROJECT_DIR$/../Db/DaniTCC-Logico.ldb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Db/DaniTCC-Logico.ldm" beforeDir="false" afterPath="$PROJECT_DIR$/../Db/DaniTCC-Logico.ldm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Db/crebas.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../Db/crebas.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,152 +41,73 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/Ethnicity.cs">
+        <entry file="file://$PROJECT_DIR$/Dani-TCC/Controllers/SocioEconomicController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+            <state relative-caret-position="720">
+              <caret line="51" column="25" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="25" />
               <folding>
-                <marker date="1558572169341" expanded="true" signature="66:391" ph="{...}" />
-                <marker date="1558572169341" expanded="true" signature="94:389" ph="{...}" />
+                <marker date="1558573525281" expanded="false" signature="6:201" ph="..." />
+                <marker date="1558573525281" expanded="true" signature="233:1565" ph="{...}" />
+                <marker date="1558573525281" expanded="true" signature="345:1563" ph="{...}" />
+                <marker date="1558573525281" expanded="true" signature="597:657" ph="{...}" />
+                <marker date="1558573525281" expanded="true" signature="745:828" ph="{...}" />
+                <marker date="1558573525281" expanded="true" signature="922:1002" ph="{...}" />
+                <marker date="1558573525281" expanded="true" signature="1100:1182" ph="{...}" />
+                <marker date="1558573525281" expanded="true" signature="1288:1374" ph="{...}" />
+                <marker date="1558573525281" expanded="true" signature="1474:1557" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/AgeGroup.cs">
+        <entry file="file://$PROJECT_DIR$/Dani-TCC/Startup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+            <state relative-caret-position="208">
+              <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
               <folding>
-                <marker date="1558572225446" expanded="true" signature="66:531" ph="{...}" />
-                <marker date="1558572225446" expanded="true" signature="93:529" ph="{...}" />
+                <marker date="1558570646991" expanded="false" signature="6:404" ph="..." />
+                <marker date="1558570646991" expanded="true" signature="424:3448" ph="{...}" />
+                <marker date="1558570646991" expanded="true" signature="451:3446" ph="{...}" />
+                <marker date="1558570646991" expanded="true" signature="550:666" ph="{...}" />
+                <marker date="1558570646991" expanded="true" signature="972:2576" ph="{...}" />
+                <marker date="1558570646991" expanded="true" signature="1588:1798" ph="{...}" />
+                <marker date="1558570646991" expanded="true" signature="1854:2236" ph="{...}" />
+                <marker date="1558570646991" expanded="true" signature="1929:2220" ph="{...}" />
+                <marker date="1558570646991" expanded="true" signature="2764:3440" ph="{...}" />
+                <marker date="1558570646991" expanded="true" signature="2811:3097" ph="{...}" />
+                <marker date="1558570646991" expanded="true" signature="2897:3031" ph="{...}" />
+                <marker date="1558570646991" expanded="true" signature="3114:3173" ph="{...}" />
+                <marker date="1558570646991" expanded="true" signature="3215:3351" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dani-TCC/Controllers/SurveyController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="24" column="65" lean-forward="true" selection-start-line="24" selection-start-column="65" selection-end-line="24" selection-end-column="65" />
+              <folding>
+                <marker date="1558573393910" expanded="false" signature="6:171" ph="..." />
+                <marker date="1558573393910" expanded="true" signature="203:900" ph="{...}" />
+                <marker date="1558573393910" expanded="true" signature="307:898" ph="{...}" />
+                <marker date="1558573393910" expanded="true" signature="572:636" ph="{...}" />
+                <marker date="1558573393910" expanded="true" signature="731:892" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/EntitySearchAlgorithmAlgorithm.cs">
+        <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/ViewModels/RegisterSurveyViewModel.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+            <state relative-caret-position="128">
+              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
               <folding>
-                <marker date="1558572422758" expanded="false" signature="6:183" ph="..." />
-                <marker date="1558572422758" expanded="true" signature="225:2509" ph="{...}" />
-                <marker date="1558572422758" expanded="true" signature="322:2507" ph="{...}" />
-                <marker date="1558572422758" expanded="true" signature="605:733" ph="{...}" />
-                <marker date="1558572422758" expanded="true" signature="792:1422" ph="{...}" />
-                <marker date="1558572422758" expanded="true" signature="1509:1876" ph="{...}" />
-                <marker date="1558572422758" expanded="true" signature="1961:2501" ph="{...}" />
-                <marker date="1558572422758" expanded="true" signature="2020:2490" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/IEntitySearchAlgorithm.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-              <folding>
-                <marker date="1558572363424" expanded="true" signature="75:362" ph="{...}" />
-                <marker date="1558572363424" expanded="true" signature="82:243" ph="///     Dado determinado pasta, este algoritmo le os arquivos e extrai as entidades ... " />
-                <marker date="1558572363424" expanded="true" signature="296:360" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/IPatternFileSearchAlgorithm.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-              <folding>
-                <marker date="1558571477900" expanded="true" signature="75:439" ph="{...}" />
-                <marker date="1558571477900" expanded="true" signature="126:437" ph="{...}" />
-                <marker date="1558571477900" expanded="true" signature="174:363" ph="///     Busca, na pasta citada e nas pastas filhas, de maneira recursiva, todas os arquivos do pattern informado ... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/PatternFileSearchAlgorithmFileSearchAlgorithm.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="80" column="37" lean-forward="true" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="37" />
-              <folding>
-                <marker date="1558571966933" expanded="false" signature="6:217" ph="..." />
-                <marker date="1558571966933" expanded="true" signature="259:3754" ph="{...}" />
-                <marker date="1558571966933" expanded="true" signature="354:3752" ph="{...}" />
-                <marker date="1558571966933" expanded="true" signature="557:754" ph="{...}" />
-                <marker date="1558571966933" expanded="true" signature="869:1289" ph="{...}" />
-                <marker date="1558571966933" expanded="true" signature="1366:2535" ph="{...}" />
-                <marker date="1558571966933" expanded="true" signature="1501:1580" ph="{...}" />
-                <marker date="1558571966933" expanded="true" signature="1681:1709" ph="{...}" />
-                <marker date="1558571966933" expanded="true" signature="1793:1981" ph="{...}" />
-                <marker date="1558571966933" expanded="true" signature="2102:2130" ph="{...}" />
-                <marker date="1558571966933" expanded="true" signature="2147:2349" ph="{...}" />
-                <marker date="1558571966933" expanded="true" signature="2470:2525" ph="{...}" />
-                <marker date="1558571966933" expanded="true" signature="2595:2890" ph="{...}" />
-                <marker date="1558571966933" expanded="true" signature="2964:3126" ph="{...}" />
-                <marker date="1558571966933" expanded="true" signature="3175:3251" ph="{...}" />
-                <marker date="1558571966933" expanded="true" signature="3323:3746" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/FamilyIncome.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-              <folding>
-                <marker date="1558572108843" expanded="true" signature="66:573" ph="{...}" />
-                <marker date="1558572108843" expanded="true" signature="97:571" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/Sexuality.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-              <folding>
-                <marker date="1558571953945" expanded="true" signature="66:329" ph="{...}" />
-                <marker date="1558571953945" expanded="true" signature="94:327" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/ParseType.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-              <folding>
-                <marker date="1558571966969" expanded="true" signature="36:110" ph="{...}" />
-                <marker date="1558571966969" expanded="true" signature="64:108" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/Gender.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-              <folding>
-                <marker date="1558572009403" expanded="true" signature="66:211" ph="{...}" />
-                <marker date="1558572009403" expanded="true" signature="91:209" ph="{...}" />
+                <marker date="1558573803298" expanded="true" signature="34:310" ph="{...}" />
+                <marker date="1558573803298" expanded="true" signature="77:308" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -235,10 +152,10 @@
     <setting file="file://$PROJECT_DIR$/Dani-TCC.Core/Services/ISurveyService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dani-TCC.Core/EventHandlers/IMediatorHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dani-TCC/Modules/DefaultModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Valueanswer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F8C31CF8-9D63-4537-93AA-C41656C69DAF/8e/aa144d1a/HostingEnvironmentExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C0A7D087-4053-4171-AB91-0714F1364F0D/e0/151b6427/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dani-TCC.Core/Services/SurveyService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Dani-TCC.CrossCutting/IOCConfig.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dani-TCC.Core/ViewModels/EnumViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dani-TCC.Core/Services/IEnumService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/68D959C4-1F56-4805-AC7D-7E64FE0D7701/bd/980828d4/IHostedService.cs" root0="SKIP_HIGHLIGHTING" />
@@ -264,8 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Dani-TCC.Core/ViewModel/EnumViewModel.cs" />
-        <option value="$PROJECT_DIR$/Dani-TCC.Core/Service/IEnumService.cs" />
         <option value="$PROJECT_DIR$/Dani-TCC.Core/Extensions/EnumExtensions.cs" />
         <option value="$PROJECT_DIR$/Dani-TCC.Core/Services/IEnumService.cs" />
         <option value="$PROJECT_DIR$/Dani-TCC.Core/EventHandlers/IMediatorHandler.cs" />
@@ -292,7 +207,6 @@
         <option value="$PROJECT_DIR$/Dani-TCC/appsettings.json" />
         <option value="$PROJECT_DIR$/Dani-TCC/Configurations/PhotoScanSettings.cs" />
         <option value="$PROJECT_DIR$/Dani-TCC/Startup.cs" />
-        <option value="$PROJECT_DIR$/Dani-TCC/Controllers/SocioEconomicController.cs" />
         <option value="$PROJECT_DIR$/Dani-TCC/Configurations/WebApiExtensions.cs" />
         <option value="$PROJECT_DIR$/Dani-TCC/Extensions/WebApiServiceCollectionExtensions.cs" />
         <option value="$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/PatternFileSearch.cs" />
@@ -315,6 +229,9 @@
         <option value="$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/AgeGroup.cs" />
         <option value="$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/IEntitySearchAlgorithm.cs" />
         <option value="$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/EntitySearchAlgorithmAlgorithm.cs" />
+        <option value="$PROJECT_DIR$/Dani-TCC.Core/Models/Valueanswer.cs" />
+        <option value="$PROJECT_DIR$/Dani-TCC/Controllers/SocioEconomicController.cs" />
+        <option value="$PROJECT_DIR$/Dani-TCC.Core/ViewModels/RegisterSurveyViewModel.cs" />
       </list>
     </option>
   </component>
@@ -345,27 +262,8 @@
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="Dani-TCC" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Dani-TCC.Core" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="Dani-TCC" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Dani-TCC.Core" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Dani-TCC" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Dani-TCC.Core" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Algorithm" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Dani-TCC" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Dani-TCC.Core" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Enums" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Controllers" type="24d0babc:SolutionExplorerModelNode" />
             </path>
           </expand>
           <select />
@@ -426,7 +324,7 @@
       <workItem from="1558349684298" duration="2180000" />
       <workItem from="1558368358409" duration="2996000" />
       <workItem from="1558395316305" duration="2067000" />
-      <workItem from="1558551475594" duration="5188000" />
+      <workItem from="1558551475594" duration="6568000" />
     </task>
     <task id="LOCAL-00001" summary="Adicionado Swagger&#10;Criado infraestrutura minima">
       <created>1558370618045</created>
@@ -498,11 +396,25 @@
       <option name="project" value="LOCAL" />
       <updated>1558571580116</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Refactor">
+      <created>1558572436500</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1558572436500</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Regenerated model">
+      <created>1558573406484</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1558573406484</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24731000" />
+    <option name="totallyTimeSpent" value="26111000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -517,7 +429,7 @@
     <frame x="67" y="-7" width="1476" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20974576" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20974576" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -525,7 +437,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3297587" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3994638" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3994638" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3297587" />
@@ -538,7 +450,7 @@
       <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49858758" weight="0.3297587" />
       <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.50141245" side_tool="true" weight="0.3297587" />
       <window_info anchor="bottom" id="REST Client" order="15" weight="0.3297587" />
-      <window_info active="true" anchor="bottom" id="Build" order="16" visible="true" weight="0.3297587" />
+      <window_info anchor="bottom" id="Build" order="16" weight="0.3297587" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -562,7 +474,9 @@
     <MESSAGE value="Adicionado estrutura minima para criar o questionario" />
     <MESSAGE value="Adicionado enumviewmodel" />
     <MESSAGE value="Refactored everything to english" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored everything to english" />
+    <MESSAGE value="Refactor" />
+    <MESSAGE value="Regenerated model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Regenerated model" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -576,10 +490,10 @@
           <line>24</line>
           <properties documentPath="$PROJECT_DIR$/Dani-TCC/Controllers/QuestionarioController.cs" initialLine="24">
             <startOffsets>
-              <option value="708" />
+              <option value="740" />
             </startOffsets>
             <endOffsets>
-              <option value="709" />
+              <option value="741" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />
@@ -624,17 +538,17 @@
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Dani-TCC/Startup.cs</url>
-          <line>29</line>
-          <properties documentPath="$PROJECT_DIR$/Dani-TCC/Startup.cs" initialLine="29">
+          <url>file://$PROJECT_DIR$/Dani-TCC/Controllers/SurveyController.cs</url>
+          <line>25</line>
+          <properties documentPath="$PROJECT_DIR$/Dani-TCC/Controllers/SurveyController.cs" initialLine="25">
             <startOffsets>
-              <option value="995" />
+              <option value="740" />
             </startOffsets>
             <endOffsets>
-              <option value="1071" />
+              <option value="741" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="11" />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -650,13 +564,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3416F7F4-F4EC-454A-B354-95DE7423B688/48/a4cd1082/Thread.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="102" column="9" lean-forward="true" selection-start-line="102" selection-start-column="9" selection-end-line="102" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/EventHandlers/DomainNotificationHandler.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
@@ -910,28 +817,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dani-TCC/Startup.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="50" column="29" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="37" />
-          <folding>
-            <marker date="1558570646991" expanded="false" signature="6:404" ph="..." />
-            <marker date="1558570646991" expanded="true" signature="424:3448" ph="{...}" />
-            <marker date="1558570646991" expanded="true" signature="451:3446" ph="{...}" />
-            <marker date="1558570646991" expanded="true" signature="550:666" ph="{...}" />
-            <marker date="1558570646991" expanded="true" signature="972:2576" ph="{...}" />
-            <marker date="1558570646991" expanded="true" signature="1588:1798" ph="{...}" />
-            <marker date="1558570646991" expanded="true" signature="1854:2236" ph="{...}" />
-            <marker date="1558570646991" expanded="true" signature="1929:2220" ph="{...}" />
-            <marker date="1558570646991" expanded="true" signature="2764:3440" ph="{...}" />
-            <marker date="1558570646991" expanded="true" signature="2811:3097" ph="{...}" />
-            <marker date="1558570646991" expanded="true" signature="2897:3031" ph="{...}" />
-            <marker date="1558570646991" expanded="true" signature="3114:3173" ph="{...}" />
-            <marker date="1558570646991" expanded="true" signature="3215:3351" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/GuardClause/Guard.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -989,38 +874,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dani-TCC/Controllers/SocioEconomicController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="12" column="40" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="40" />
-          <folding>
-            <marker date="1558571918336" expanded="false" signature="6:201" ph="..." />
-            <marker date="1558571918336" expanded="true" signature="233:1573" ph="{...}" />
-            <marker date="1558571918336" expanded="true" signature="345:1571" ph="{...}" />
-            <marker date="1558571918336" expanded="true" signature="597:657" ph="{...}" />
-            <marker date="1558571918336" expanded="true" signature="741:824" ph="{...}" />
-            <marker date="1558571918336" expanded="true" signature="918:998" ph="{...}" />
-            <marker date="1558571918336" expanded="true" signature="1102:1184" ph="{...}" />
-            <marker date="1558571918336" expanded="true" signature="1292:1378" ph="{...}" />
-            <marker date="1558571918336" expanded="true" signature="1482:1565" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dani-TCC/Controllers/SurveyController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
-          <folding>
-            <marker date="1558571313587" expanded="false" signature="6:139" ph="..." />
-            <marker date="1558571313587" expanded="true" signature="171:868" ph="{...}" />
-            <marker date="1558571313587" expanded="true" signature="275:866" ph="{...}" />
-            <marker date="1558571313587" expanded="true" signature="540:604" ph="{...}" />
-            <marker date="1558571313587" expanded="true" signature="699:860" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Services/Photo.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
@@ -1032,17 +885,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
           <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/ViewModels/RegisterSurveyViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding>
-            <marker date="1558571333397" expanded="true" signature="32:310" ph="{...}" />
-            <marker date="1558571333397" expanded="true" signature="75:308" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1088,8 +930,8 @@
         <state relative-caret-position="64">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding>
-            <marker date="1558571284341" expanded="true" signature="32:144" ph="{...}" />
-            <marker date="1558571284341" expanded="true" signature="70:142" ph="{...}" />
+            <marker date="1558573393931" expanded="true" signature="65:177" ph="{...}" />
+            <marker date="1558573393931" expanded="true" signature="103:175" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1111,53 +953,49 @@
         <state relative-caret-position="112">
           <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
           <folding>
-            <marker date="1558571333468" expanded="true" signature="32:238" ph="{...}" />
-            <marker date="1558571333468" expanded="true" signature="82:236" ph="{...}" />
-            <marker date="1558571333468" expanded="true" signature="154:230" ph="{...}" />
+            <marker date="1558573393940" expanded="true" signature="65:271" ph="{...}" />
+            <marker date="1558573393940" expanded="true" signature="115:269" ph="{...}" />
+            <marker date="1558573393940" expanded="true" signature="187:263" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/Sexuality.cs">
+    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/IEntitySearchAlgorithm.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        <state relative-caret-position="160">
+          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
           <folding>
-            <marker date="1558571953945" expanded="true" signature="66:329" ph="{...}" />
-            <marker date="1558571953945" expanded="true" signature="94:327" ph="{...}" />
+            <marker date="1558572363424" expanded="true" signature="75:362" ph="{...}" />
+            <marker date="1558572363424" expanded="true" signature="82:243" ph="///     Dado determinado pasta, este algoritmo le os arquivos e extrai as entidades ... " />
+            <marker date="1558572363424" expanded="true" signature="296:360" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/ParseType.cs">
+    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/EntitySearchAlgorithmAlgorithm.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        <state relative-caret-position="256">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
           <folding>
-            <marker date="1558571966969" expanded="true" signature="36:110" ph="{...}" />
-            <marker date="1558571966969" expanded="true" signature="64:108" ph="{...}" />
+            <marker date="1558572422758" expanded="false" signature="6:183" ph="..." />
+            <marker date="1558572422758" expanded="true" signature="225:2509" ph="{...}" />
+            <marker date="1558572422758" expanded="true" signature="322:2507" ph="{...}" />
+            <marker date="1558572422758" expanded="true" signature="605:733" ph="{...}" />
+            <marker date="1558572422758" expanded="true" signature="792:1422" ph="{...}" />
+            <marker date="1558572422758" expanded="true" signature="1509:1876" ph="{...}" />
+            <marker date="1558572422758" expanded="true" signature="1961:2501" ph="{...}" />
+            <marker date="1558572422758" expanded="true" signature="2020:2490" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/Gender.cs">
+    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/AgeGroup.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        <state relative-caret-position="304">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
           <folding>
-            <marker date="1558572009403" expanded="true" signature="66:211" ph="{...}" />
-            <marker date="1558572009403" expanded="true" signature="91:209" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/FamilyIncome.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <folding>
-            <marker date="1558572108843" expanded="true" signature="66:573" ph="{...}" />
-            <marker date="1558572108843" expanded="true" signature="97:571" ph="{...}" />
+            <marker date="1558572225446" expanded="true" signature="66:531" ph="{...}" />
+            <marker date="1558572225446" expanded="true" signature="93:529" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1173,13 +1011,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/AgeGroup.cs">
+    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/IPatternFileSearchAlgorithm.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        <state relative-caret-position="192">
+          <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
           <folding>
-            <marker date="1558572225446" expanded="true" signature="66:531" ph="{...}" />
-            <marker date="1558572225446" expanded="true" signature="93:529" ph="{...}" />
+            <marker date="1558571477900" expanded="true" signature="75:439" ph="{...}" />
+            <marker date="1558571477900" expanded="true" signature="126:437" ph="{...}" />
+            <marker date="1558571477900" expanded="true" signature="174:363" ph="///     Busca, na pasta citada e nas pastas filhas, de maneira recursiva, todas os arquivos do pattern informado ... " />
           </folding>
         </state>
       </provider>
@@ -1209,43 +1048,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/IPatternFileSearchAlgorithm.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-          <folding>
-            <marker date="1558571477900" expanded="true" signature="75:439" ph="{...}" />
-            <marker date="1558571477900" expanded="true" signature="126:437" ph="{...}" />
-            <marker date="1558571477900" expanded="true" signature="174:363" ph="///     Busca, na pasta citada e nas pastas filhas, de maneira recursiva, todas os arquivos do pattern informado ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/IEntitySearchAlgorithm.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding>
-            <marker date="1558572363424" expanded="true" signature="75:362" ph="{...}" />
-            <marker date="1558572363424" expanded="true" signature="82:243" ph="///     Dado determinado pasta, este algoritmo le os arquivos e extrai as entidades ... " />
-            <marker date="1558572363424" expanded="true" signature="296:360" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Algorithm/EntitySearchAlgorithmAlgorithm.cs">
+    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/FamilyIncome.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
           <folding>
-            <marker date="1558572422758" expanded="false" signature="6:183" ph="..." />
-            <marker date="1558572422758" expanded="true" signature="225:2509" ph="{...}" />
-            <marker date="1558572422758" expanded="true" signature="322:2507" ph="{...}" />
-            <marker date="1558572422758" expanded="true" signature="605:733" ph="{...}" />
-            <marker date="1558572422758" expanded="true" signature="792:1422" ph="{...}" />
-            <marker date="1558572422758" expanded="true" signature="1509:1876" ph="{...}" />
-            <marker date="1558572422758" expanded="true" signature="1961:2501" ph="{...}" />
-            <marker date="1558572422758" expanded="true" signature="2020:2490" ph="{...}" />
+            <marker date="1558572108843" expanded="true" signature="66:573" ph="{...}" />
+            <marker date="1558572108843" expanded="true" signature="97:571" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/ParseType.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+          <folding>
+            <marker date="1558571966969" expanded="true" signature="36:110" ph="{...}" />
+            <marker date="1558571966969" expanded="true" signature="64:108" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/Gender.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <marker date="1558572009403" expanded="true" signature="66:211" ph="{...}" />
+            <marker date="1558572009403" expanded="true" signature="91:209" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Valueanswer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <folding>
+            <marker date="1558573393955" expanded="true" signature="45:440" ph="{...}" />
+            <marker date="1558573393955" expanded="true" signature="84:438" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/Models/Enums/Sexuality.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding>
+            <marker date="1558571953945" expanded="true" signature="66:329" ph="{...}" />
+            <marker date="1558571953945" expanded="true" signature="94:327" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dani-TCC/Controllers/SocioEconomicController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="51" column="25" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="25" />
+          <folding>
+            <marker date="1558573525281" expanded="false" signature="6:201" ph="..." />
+            <marker date="1558573525281" expanded="true" signature="233:1565" ph="{...}" />
+            <marker date="1558573525281" expanded="true" signature="345:1563" ph="{...}" />
+            <marker date="1558573525281" expanded="true" signature="597:657" ph="{...}" />
+            <marker date="1558573525281" expanded="true" signature="745:828" ph="{...}" />
+            <marker date="1558573525281" expanded="true" signature="922:1002" ph="{...}" />
+            <marker date="1558573525281" expanded="true" signature="1100:1182" ph="{...}" />
+            <marker date="1558573525281" expanded="true" signature="1288:1374" ph="{...}" />
+            <marker date="1558573525281" expanded="true" signature="1474:1557" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dani-TCC/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
+          <folding>
+            <marker date="1558570646991" expanded="false" signature="6:404" ph="..." />
+            <marker date="1558570646991" expanded="true" signature="424:3448" ph="{...}" />
+            <marker date="1558570646991" expanded="true" signature="451:3446" ph="{...}" />
+            <marker date="1558570646991" expanded="true" signature="550:666" ph="{...}" />
+            <marker date="1558570646991" expanded="true" signature="972:2576" ph="{...}" />
+            <marker date="1558570646991" expanded="true" signature="1588:1798" ph="{...}" />
+            <marker date="1558570646991" expanded="true" signature="1854:2236" ph="{...}" />
+            <marker date="1558570646991" expanded="true" signature="1929:2220" ph="{...}" />
+            <marker date="1558570646991" expanded="true" signature="2764:3440" ph="{...}" />
+            <marker date="1558570646991" expanded="true" signature="2811:3097" ph="{...}" />
+            <marker date="1558570646991" expanded="true" signature="2897:3031" ph="{...}" />
+            <marker date="1558570646991" expanded="true" signature="3114:3173" ph="{...}" />
+            <marker date="1558570646991" expanded="true" signature="3215:3351" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dani-TCC/Controllers/SurveyController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="24" column="65" lean-forward="true" selection-start-line="24" selection-start-column="65" selection-end-line="24" selection-end-column="65" />
+          <folding>
+            <marker date="1558573393910" expanded="false" signature="6:171" ph="..." />
+            <marker date="1558573393910" expanded="true" signature="203:900" ph="{...}" />
+            <marker date="1558573393910" expanded="true" signature="307:898" ph="{...}" />
+            <marker date="1558573393910" expanded="true" signature="572:636" ph="{...}" />
+            <marker date="1558573393910" expanded="true" signature="731:892" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dani-TCC.Core/ViewModels/RegisterSurveyViewModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding>
+            <marker date="1558573803298" expanded="true" signature="34:310" ph="{...}" />
+            <marker date="1558573803298" expanded="true" signature="77:308" ph="{...}" />
           </folding>
         </state>
       </provider>

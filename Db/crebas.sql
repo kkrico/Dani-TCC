@@ -1,113 +1,112 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     20/05/2019 22:55:09                          */
+/* Created on:     22/05/2019 21:53:37                          */
 /*==============================================================*/
 
 
-drop table if exists FOTO;
+drop table if exists ANSWER;
 
-drop table if exists PESQUISA;
+drop table if exists PERSON;
 
-drop table if exists PESSOA;
+drop table if exists PHOTO;
 
-drop table if exists QUESTAO;
+drop table if exists QUESTION;
 
-drop table if exists RESPOSTA;
+drop table if exists SURVEY;
 
-drop table if exists VALORESRESPOSTA;
+drop table if exists VALUEANSWER;
 
 /*==============================================================*/
-/* Table: FOTO                                                  */
+/* Table: ANSWER                                                */
 /*==============================================================*/
-create table FOTO
+create table ANSWER
 (
-   IDFOTO               int not null auto_increment,
-   IDGENERO             int,
-   IDETNIA              int,
-   HASHFOTO             varchar(50) not null,
-   ELEITO               tinyint not null,
-   primary key (IDFOTO)
+   IDANSWER             int not null auto_increment,
+   IDSURVEY             int not null,
+   IDQUESTION           int not null,
+   primary key (IDANSWER)
+);
+
+alter table ANSWER comment 'Representa uma questão respondida';
+
+/*==============================================================*/
+/* Table: PERSON                                                */
+/*==============================================================*/
+create table PERSON
+(
+   IDPERSON             int not null auto_increment,
+   IDAGEGROUP           int,
+   IDGENDER             int,
+   IDETHNICITY          int,
+   IDSEXUALITY          int,
+   IDFAMILYINCOME       int,
+   primary key (IDPERSON)
+);
+
+alter table PERSON comment 'Representa uma pessoa que respondeu a pesquisa';
+
+/*==============================================================*/
+/* Table: PHOTO                                                 */
+/*==============================================================*/
+create table PHOTO
+(
+   IDPHOTO              int not null auto_increment,
+   IDGENDER             int,
+   IDETHNICITY          int,
+   PHOTOHASH            varchar(50) not null,
+   ELECTED              tinyint not null,
+   primary key (IDPHOTO)
 );
 
 /*==============================================================*/
-/* Table: PESQUISA                                              */
+/* Table: QUESTION                                              */
 /*==============================================================*/
-create table PESQUISA
+create table QUESTION
 (
-   IDPESQUISA           int not null auto_increment,
-   IDPESSOA             int not null,
-   HORAINICIOPREENCHIMENTO datetime,
-   HORAFIMPREENCHIMENTO datetime,
-   primary key (IDPESQUISA)
-);
-
-alter table PESQUISA comment 'Representa uma pesquisa';
-
-/*==============================================================*/
-/* Table: PESSOA                                                */
-/*==============================================================*/
-create table PESSOA
-(
-   IDPESSOA             int not null auto_increment,
-   IDFAIXAETARIA        int,
-   IDGENERO             int,
-   IDETNIA              int,
-   IDSEXUALIDADE        int,
-   IDRENDAFAMILIA       int,
-   EMAILPESSOA          varchar(100),
-   primary key (IDPESSOA)
-);
-
-alter table PESSOA comment 'Representa uma pessoa que respondeu a pesquisa';
-
-/*==============================================================*/
-/* Table: QUESTAO                                               */
-/*==============================================================*/
-create table QUESTAO
-(
-   IDQUESTAO            int not null auto_increment,
-   DESCRICAOQUESTAO     varchar(500),
-   primary key (IDQUESTAO)
+   IDQUESTION           int not null auto_increment,
+   QUESTIONDESCRIPTION  varchar(500),
+   primary key (IDQUESTION)
 );
 
 /*==============================================================*/
-/* Table: RESPOSTA                                              */
+/* Table: SURVEY                                                */
 /*==============================================================*/
-create table RESPOSTA
+create table SURVEY
 (
-   IDRESPOSTA           int not null auto_increment,
-   IDPESQUISA           int not null,
-   IDQUESTAO            int not null,
-   primary key (IDRESPOSTA)
+   IDSURVEY             int not null auto_increment,
+   IDPERSON             int,
+   INITIALFILLDATE      datetime not null,
+   FINALFILLDATE        datetime,
+   primary key (IDSURVEY)
 );
 
-alter table RESPOSTA comment 'Representa uma questão respondida';
+alter table SURVEY comment 'Representa uma pesquisa';
 
 /*==============================================================*/
-/* Table: VALORESRESPOSTA                                       */
+/* Table: VALUEANSWER                                           */
 /*==============================================================*/
-create table VALORESRESPOSTA
+create table VALUEANSWER
 (
-   IDVALORRESPOSTA      int not null auto_increment,
-   IDRESPOSTA           int not null,
-   IDFOTO               int not null,
-   FOISELECIONADA       tinyint not null,
-   TEMPOSELECAO         timestamp not null,
-   primary key (IDVALORRESPOSTA)
+   IDVALUEANSWER        int not null auto_increment,
+   IDANSWER             int not null,
+   IDPHOTO              int not null,
+   HASCHOOSEN           tinyint not null,
+   SELECTIONTIME        timestamp not null,
+   primary key (IDVALUEANSWER)
 );
 
-alter table PESQUISA add constraint FK_RELATIONSHIP_1 foreign key (IDPESSOA)
-      references PESSOA (IDPESSOA) on delete restrict on update restrict;
+alter table ANSWER add constraint FK_RELATIONSHIP_2 foreign key (IDSURVEY)
+      references SURVEY (IDSURVEY) on delete restrict on update restrict;
 
-alter table RESPOSTA add constraint FK_RELATIONSHIP_2 foreign key (IDPESQUISA)
-      references PESQUISA (IDPESQUISA) on delete restrict on update restrict;
+alter table ANSWER add constraint FK_RELATIONSHIP_3 foreign key (IDQUESTION)
+      references QUESTION (IDQUESTION) on delete restrict on update restrict;
 
-alter table RESPOSTA add constraint FK_RELATIONSHIP_3 foreign key (IDQUESTAO)
-      references QUESTAO (IDQUESTAO) on delete restrict on update restrict;
+alter table SURVEY add constraint FK_RELATIONSHIP_1 foreign key (IDPERSON)
+      references PERSON (IDPERSON) on delete restrict on update restrict;
 
-alter table VALORESRESPOSTA add constraint FK_RELATIONSHIP_4 foreign key (IDRESPOSTA)
-      references RESPOSTA (IDRESPOSTA) on delete restrict on update restrict;
+alter table VALUEANSWER add constraint FK_RELATIONSHIP_4 foreign key (IDANSWER)
+      references ANSWER (IDANSWER) on delete restrict on update restrict;
 
-alter table VALORESRESPOSTA add constraint FK_RELATIONSHIP_5 foreign key (IDFOTO)
-      references FOTO (IDFOTO) on delete restrict on update restrict;
+alter table VALUEANSWER add constraint FK_RELATIONSHIP_5 foreign key (IDPHOTO)
+      references PHOTO (IDPHOTO) on delete restrict on update restrict;
 

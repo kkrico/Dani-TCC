@@ -64,6 +64,7 @@
         <e p="GuardClause" t="Include">
           <e p="Guard.cs" t="Include" />
         </e>
+        <e p="Model" t="Include" />
         <e p="Models" t="Include">
           <e p="Algorithm" t="Include">
             <e p="EntitySearchAlgorithmAlgorithm.cs" t="Include" />
@@ -72,6 +73,7 @@
             <e p="IPatternFileSearchAlgorithm.cs" t="Include" />
             <e p="PatternFileSearchAlgorithmFileSearchAlgorithm.cs" t="Include" />
           </e>
+          <e p="Answer.cs" t="Include" />
           <e p="Enums" t="Include">
             <e p="AgeGroup.cs" t="Include" />
             <e p="Ethnicity.cs" t="Include" />
@@ -80,6 +82,12 @@
             <e p="ParseType.cs" t="Include" />
             <e p="Sexuality.cs" t="Include" />
           </e>
+          <e p="Person.cs" t="Include" />
+          <e p="Photo.cs" t="Include" />
+          <e p="Question.cs" t="Include" />
+          <e p="Survey.cs" t="Include" />
+          <e p="SurveyDbContext.cs" t="Include" />
+          <e p="Valueanswer.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

@@ -2,10 +2,10 @@ namespace Dani_TCC.Core.ViewModels
 {
     public class RegisterSurveyViewModel
     {
-        public int? Etnia { get; set; }
-        public int? Genero { get; set; }
-        public int? FaixaEtaria { get; set; }
-        public int? RendaFamiliar { get; set; }
-        public int? Sexualidade { get; set; }
+        public int? Ethnicity { get; set; }
+        public int? Gender { get; set; }
+        public int? AgeGroup { get; set; }
+        public int? FamilyIncome { get; set; }
+        public int? Sexuality { get; set; }
     }
 }

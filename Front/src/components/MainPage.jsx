@@ -1,7 +1,7 @@
 import React from "react";
 import { API } from "../API/API";
 
-const socieeconomico = "socieconomico";
+const socieeconomico = "SocioEconomic";
 
 const getAll = (uris) => {
     return uris.map(uri => API.get(socieeconomico + "/" + uri));
@@ -18,7 +18,6 @@ const Select = ({ itens, label, onChange, name }) => {
                 }
             </select>
         </div>
-        }
     </div>
 }
 
@@ -35,11 +34,11 @@ export class MainPage extends React.Component {
             sexualidade: [],
             loading: false,
             questionarioSocioEconomico: {
-                etnia: null,
-                genero: null,
-                faixaetaria: null,
-                rendafamiliar: null,
-                sexualidade: null,
+                ethnicity: null,
+                gender: null,
+                agegroup: null,
+                familyincome: null,
+                sexuality: null,
             }
         }
 
@@ -67,7 +66,7 @@ export class MainPage extends React.Component {
         debugger;
 
         API
-            .post("/questionario", this.state.questionarioSocioEconomico);
+            .post("/survey", this.state.questionarioSocioEconomico);
         return false;
     }
 
@@ -75,7 +74,7 @@ export class MainPage extends React.Component {
 
         this.setState({ loading: true })
         Promise.all(
-            getAll(["etnia", "genero", "faixaetaria", "rendafamiliar", "sexualidade"])
+            getAll(["ethnicity", "gender", "agegroup", "familyincome", "sexuality"])
         ).then(itens => {
             const [etnia, genero, faixaetaria, rendafamiliar, sexualidade] = itens;
 
@@ -112,19 +111,19 @@ export class MainPage extends React.Component {
                                 <form method="POST" onSubmit={this.handlePost}>
                                     <div className="columns">
                                         <div className="column">
-                                            <Select itens={this.state.etnia} name="etnia" label="Etnia" onChange={this.handleChange} />
+                                            <Select itens={this.state.etnia} name="ethnicity" label="Etnia" onChange={this.handleChange} />
                                         </div>
                                         <div className="column">
-                                            <Select itens={this.state.genero} name="genero" label="Genero" onChange={this.handleChange}></Select>
+                                            <Select itens={this.state.genero} name="gender" label="Genero" onChange={this.handleChange}></Select>
                                         </div>
                                         <div className="column">
-                                            <Select itens={this.state.faixaetaria} name="faixaetaria" label="Faixa Etária" onChange={this.handleChange}></Select>
+                                            <Select itens={this.state.faixaetaria} name="agegroup" label="Faixa Etária" onChange={this.handleChange}></Select>
                                         </div>
                                         <div className="column">
-                                            <Select itens={this.state.rendafamiliar} name="rendafamiliar" label="Renda Familiar" onChange={this.handleChange}></Select>
+                                            <Select itens={this.state.rendafamiliar} name="familyincome" label="Renda Familiar" onChange={this.handleChange}></Select>
                                         </div>
                                         <div className="column">
-                                            <Select itens={this.state.sexualidade} label="Sexualidade" name="sexualidade" onChange={this.handleChange}></Select>
+                                            <Select itens={this.state.sexualidade} label="Sexualidade" name="sexuality" onChange={this.handleChange}></Select>
                                         </div>
                                     </div>
                                     <button type="submit" className="button is-large is-fullwidth" href="https://github.com/aldi/awesome-bulma-templates">
