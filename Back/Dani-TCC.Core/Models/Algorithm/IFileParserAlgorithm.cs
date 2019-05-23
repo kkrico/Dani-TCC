@@ -4,12 +4,4 @@
     {
         T Parse(string fileLocation);
     }
-    
-    public class PhotoFileParser : IFileParserAlgorithm<Photo>
-    {
-        public Photo Parse(string fileLocation)
-        {
-            throw new System.NotImplementedException();
-        }
-    }
 }

@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\ramos\\Desktop\\Dani\\Back\\Dani-TCC.Core\\Dani-TCC.Core.csproj",
+    "projectUniqueName": "D:\\X\\KK\\Dani-TCC\\Back\\Dani-TCC.Core\\Dani-TCC.Core.csproj",
     "projectName": "Dani-TCC.Core",
-    "projectPath": "C:\\Users\\ramos\\Desktop\\Dani\\Back\\Dani-TCC.Core\\Dani-TCC.Core.csproj",
-    "outputPath": "C:\\Users\\ramos\\Desktop\\Dani\\Back\\Dani-TCC.Core\\obj\\",
+    "projectPath": "D:\\X\\KK\\Dani-TCC\\Back\\Dani-TCC.Core\\Dani-TCC.Core.csproj",
+    "outputPath": "D:\\X\\KK\\Dani-TCC\\Back\\Dani-TCC.Core\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
