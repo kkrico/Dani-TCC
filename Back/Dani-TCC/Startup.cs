@@ -40,6 +40,8 @@ namespace Dani_TCC
                 services.AddScoped(c => photoScanSettings);
             }
 
+            services.AddMemoryCache();
+
             services.AddDbContext<DB_PESQUISA_TCCContext>(options =>
                 options.UseMySQL(Configuration.GetConnectionString("DB_PESQUISA_TCC")));
             

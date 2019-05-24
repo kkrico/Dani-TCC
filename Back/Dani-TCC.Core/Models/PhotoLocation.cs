@@ -4,11 +4,11 @@ using System.Linq;
 using System.Security.Cryptography;
 using Dani_TCC.Core.Models.Enums;
 
-namespace Dani_TCC.Core.Models.Algorithm
+namespace Dani_TCC.Core.Models
 {
     public class PhotoLocation
     {
-        private static SHA256 Sha256; 
+        private static readonly SHA256 Sha256; 
 
         static PhotoLocation()
         {
@@ -40,26 +40,27 @@ namespace Dani_TCC.Core.Models.Algorithm
         
         public static implicit operator Photo(PhotoLocation v)
         {
+            var byteContents = GetFileContents(v._fileLocation);
             return new Photo
             {
                 Idgender = (int)v.Gender,
                 Idethnicity = (int)v.Ethnicity,
                 Elected = Convert.ToByte(!v._fileLocation.Contains("N eleitos")),
-                Photohash = GeneratePhotoHash(v._fileLocation),
+                Photohash = BytesToHash(byteContents),
+                FileContents = byteContents,
                 PhotoName = Path.GetFileNameWithoutExtension(v._fileLocation)
             };
         }
 
-        private static string GeneratePhotoHash(string fileLocation)
+        private static byte[] GetFileContents(string fileLocation)
         {
             using (FileStream stream = File.OpenRead(fileLocation))
             {
-                var bytes = Sha256.ComputeHash(stream);
-                return BytesToString(bytes);
+                return Sha256.ComputeHash(stream);
             }
         }
         
-        private static string BytesToString(byte[] bytes)
+        private static string BytesToHash(byte[] bytes)
         {
             return bytes.Aggregate("", (current, b) => current + b.ToString("x2"));
         }

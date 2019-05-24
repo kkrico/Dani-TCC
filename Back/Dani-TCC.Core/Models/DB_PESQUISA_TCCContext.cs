@@ -108,6 +108,11 @@ namespace Dani_TCC.Core.Models
                     .HasColumnName("IDPHOTO")
                     .HasColumnType("int(11)");
 
+
+                entity.Property(e => e.FileContents)
+                    .HasColumnName("FILECONTENTS")
+                    .HasColumnType("blob");
+
                 entity.Property(e => e.Elected)
                     .HasColumnName("ELECTED")
                     .HasColumnType("tinyint(4)");
