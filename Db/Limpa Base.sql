@@ -14,16 +14,3 @@ WHERE IDSURVEY > -1;
 
 DELETE FROM PERSON
 WHERE IDPERSON > -1;
-
-
-
-
-
-
-
-
-
-
-
-
-

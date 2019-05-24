@@ -40,29 +40,32 @@ namespace Dani_TCC.Core.Models
         
         public static implicit operator Photo(PhotoLocation v)
         {
-            var byteContents = GetFileContents(v._fileLocation);
             return new Photo
             {
                 Idgender = (int)v.Gender,
                 Idethnicity = (int)v.Ethnicity,
                 Elected = Convert.ToByte(!v._fileLocation.Contains("N eleitos")),
-                Photohash = BytesToHash(byteContents),
-                FileContents = byteContents,
+                Photohash = GenerateMd5Hash(v._fileLocation),
+                FileContents = GetFileContents(v._fileLocation),
                 PhotoName = Path.GetFileNameWithoutExtension(v._fileLocation)
             };
         }
 
-        private static byte[] GetFileContents(string fileLocation)
+        private static string GenerateMd5Hash(string vFileLocation)
         {
-            using (FileStream stream = File.OpenRead(fileLocation))
+            using (var md5 = MD5.Create())
             {
-                return Sha256.ComputeHash(stream);
+                using (var stream = File.OpenRead(vFileLocation))
+                {
+                    var hash = md5.ComputeHash(stream);
+                    return BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
+                }
             }
         }
-        
-        private static string BytesToHash(byte[] bytes)
+
+        private static byte[] GetFileContents(string fileLocation)
         {
-            return bytes.Aggregate("", (current, b) => current + b.ToString("x2"));
+            return File.ReadAllBytes(fileLocation);
         }
     }
 }
