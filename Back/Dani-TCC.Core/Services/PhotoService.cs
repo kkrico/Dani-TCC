@@ -9,11 +9,13 @@ namespace Dani_TCC.Core.Services
     {
         private readonly DB_PESQUISA_TCCContext _context;
         private readonly IEntitySearchAlgorithm<Photo> _entitySearchAlgorithm;
+        private readonly ICacheService _cacheService;
 
-        public PhotoService(DB_PESQUISA_TCCContext context, IEntitySearchAlgorithm<Photo> entitySearchAlgorithm)
+        public PhotoService(DB_PESQUISA_TCCContext context, IEntitySearchAlgorithm<Photo> entitySearchAlgorithm, ICacheService cacheService)
         {
             _context = context;
             _entitySearchAlgorithm = entitySearchAlgorithm;
+            _cacheService = cacheService;
         }
         
         public void ParsePhotos(string folder)
@@ -32,7 +34,12 @@ namespace Dani_TCC.Core.Services
 
         public IEnumerable<Photo> ListValidSurveyPhotos()
         {
-            throw new System.NotImplementedException();
+            List<Photo> allPhotos = _cacheService.GetAllPhotos().OrderBy(d => d.PhotoName).ToList();
+            
+            int total = allPhotos.Count();
+            total = total % 2 != 0 ? total - 1 : total;
+
+            return allPhotos.Take(total);
         }
 
         private void AddNewPhotos(IEnumerable<string> currentPhotoHashes, IEnumerable<string> existingPhotoHashes, IEnumerable<Photo> currentPhotos)

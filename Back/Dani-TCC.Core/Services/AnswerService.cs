@@ -7,25 +7,22 @@ namespace Dani_TCC.Core.Services
     public class AnswerService : IAnswerService
     {
         private readonly DB_PESQUISA_TCCContext _context;
-        private readonly ICacheService _cacheService;
         private readonly IPhotoService _photoService;
 
-        public AnswerService(DB_PESQUISA_TCCContext context, ICacheService cacheService, IPhotoService photoService)
+        public AnswerService(DB_PESQUISA_TCCContext context, IPhotoService photoService)
         {
             _context = context;
-            _cacheService = cacheService;
             _photoService = photoService;
         }
         
         public ICollection<Answer> GenerateAnswers()
         {
-            IEnumerable<Photo> allPhotos = _cacheService.GetAllPhotos().OrderBy(d => d.PhotoName).ToList();
             Question question = _context.Question.First();
 
             int total = _photoService.ListValidSurveyPhotos().Count();
 
             var result = new List<Answer>();
-            for (int i = 0; i < total; i++)
+            for (int i = 0; i < total / SurveyService.TotalOptions; i++)
             {
                 var answer = new Answer()
                 {
