@@ -21,7 +21,7 @@ namespace Dani_TCC.Core.Services
             IEnumerable<Photo> currentPhotos = _entitySearchAlgorithm.ListEntities(folder);
             
             
-            IQueryable<string> existingPhotoHashes = _context.Photo.Select(photo => photo.Photohash);
+            IEnumerable<string> existingPhotoHashes = _context.Photo.Select(photo => photo.Photohash).ToList();
             IEnumerable<string> currentPhotoHashes = currentPhotos.Select(e => e.Photohash);
             
             AddNewPhotos(currentPhotoHashes, existingPhotoHashes, currentPhotos);
@@ -30,7 +30,7 @@ namespace Dani_TCC.Core.Services
             _context.SaveChanges();
         }
 
-        private void AddNewPhotos(IEnumerable<string> currentPhotoHashes, IQueryable<string> existingPhotoHashes, IEnumerable<Photo> currentPhotos)
+        private void AddNewPhotos(IEnumerable<string> currentPhotoHashes, IEnumerable<string> existingPhotoHashes, IEnumerable<Photo> currentPhotos)
         {
             IEnumerable<string> hashesToAdd = currentPhotoHashes.Where(cp => !existingPhotoHashes.Contains(cp));
             foreach (string hashToAdd in hashesToAdd)
@@ -40,9 +40,9 @@ namespace Dani_TCC.Core.Services
             }
         }
 
-        private void DeleteNonUsedPhotos(IQueryable<string> existingPhotoHashes, IEnumerable<string> currentPhotoHashes)
+        private void DeleteNonUsedPhotos(IEnumerable<string> existingPhotoHashes, IEnumerable<string> currentPhotoHashes)
         {
-            IQueryable<string> hashesToDelete = existingPhotoHashes.Except(currentPhotoHashes);
+            IEnumerable<string> hashesToDelete = existingPhotoHashes.Except(currentPhotoHashes);
             IQueryable<Photo> photosToDelete = _context.Photo.Where(p => hashesToDelete.Contains(p.Photohash));
             _context.Photo.RemoveRange(photosToDelete);
         }

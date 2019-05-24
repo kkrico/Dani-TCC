@@ -14,6 +14,7 @@ namespace Dani_TCC.Core.Models
         public int? Idethnicity { get; set; }
         public string Photohash { get; set; }
         public byte Elected { get; set; }
+        public string PhotoName { get; set; }
 
         public ICollection<Valueanswer> Valueanswer { get; set; }
     }

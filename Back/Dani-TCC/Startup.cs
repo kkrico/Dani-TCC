@@ -2,11 +2,13 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Dani_TCC.Configurations;
+using Dani_TCC.Core.Models;
 using Dani_TCC.Filters;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
@@ -36,8 +38,10 @@ namespace Dani_TCC
             if (HostingEnvironment.IsDevelopment() && photoScanSettings.ShouldScan)
             {
                 services.AddScoped(c => photoScanSettings);
-                services.AddHostedService<PhotoScanHostedService>();
             }
+
+            services.AddDbContext<DB_PESQUISA_TCCContext>(options =>
+                options.UseMySQL(Configuration.GetConnectionString("DB_PESQUISA_TCC")));
             
             services.AddWebApi(options =>
             {

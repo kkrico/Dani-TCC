@@ -1,13 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Debug;
 
 namespace Dani_TCC.Core.Models
 {
     public partial class DB_PESQUISA_TCCContext : DbContext
     {
-        public DB_PESQUISA_TCCContext()
-        {
-        }
-
+        private static readonly LoggerFactory MyLoggerFactory = 
+            new LoggerFactory(new[] { 
+                new DebugLoggerProvider() 
+            });
+        
         public DB_PESQUISA_TCCContext(DbContextOptions<DB_PESQUISA_TCCContext> options)
             : base(options)
         {
@@ -22,11 +25,7 @@ namespace Dani_TCC.Core.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (!optionsBuilder.IsConfigured)
-            {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseMySQL("server=localhost;port=3306;user=root;password=root;database=DB_PESQUISA_TCC");
-            }
+            optionsBuilder.UseLoggerFactory(MyLoggerFactory);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -124,7 +123,13 @@ namespace Dani_TCC.Core.Models
                 entity.Property(e => e.Photohash)
                     .IsRequired()
                     .HasColumnName("PHOTOHASH")
-                    .HasMaxLength(50)
+                    .HasMaxLength(5000)
+                    .IsUnicode(false);
+                
+                entity.Property(e => e.PhotoName)
+                    .IsRequired()
+                    .HasColumnName("NAME")
+                    .HasMaxLength(500)
                     .IsUnicode(false);
             });
 

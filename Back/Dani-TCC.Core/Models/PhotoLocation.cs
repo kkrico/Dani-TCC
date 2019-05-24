@@ -21,9 +21,22 @@ namespace Dani_TCC.Core.Models.Algorithm
             _fileLocation = fileLocation ?? throw new ArgumentNullException(nameof(fileLocation));
         }
 
-        public Ethnicity Ethnicity => _fileLocation.Contains("BRANC") ? Ethnicity.White : Ethnicity.GrayishBrown;
+        public Ethnicity Ethnicity
+        {
+            get
+            {
+                if (_fileLocation.Contains("Pret"))
+                    return Ethnicity.Black;
+                if (_fileLocation.Contains("Bran"))
+                    return Ethnicity.White;
+                if (_fileLocation.Contains("Pard"))
+                    return Ethnicity.GrayishBrown;
+                
+                throw new InvalidOperationException();
+            }
+        }
 
-        public Gender Gender => _fileLocation.Contains("MASC") ? Gender.Male : Gender.Female;
+        public Gender Gender => _fileLocation.Contains("Masc") ? Gender.Male : Gender.Female;
         
         public static implicit operator Photo(PhotoLocation v)
         {
@@ -31,8 +44,9 @@ namespace Dani_TCC.Core.Models.Algorithm
             {
                 Idgender = (int)v.Gender,
                 Idethnicity = (int)v.Ethnicity,
-                Elected = Convert.ToByte(v._fileLocation.Contains("Eleito")),
-                Photohash = GeneratePhotoHash(v._fileLocation)
+                Elected = Convert.ToByte(!v._fileLocation.Contains("N eleitos")),
+                Photohash = GeneratePhotoHash(v._fileLocation),
+                PhotoName = Path.GetFileNameWithoutExtension(v._fileLocation)
             };
         }
 
