@@ -28,11 +28,17 @@ namespace Dani_TCC.Core.Services
 
             _context.Survey.Add(survey);
             _context.SaveChanges();
-            
-            return new BeginSurveyViewModel()
+
+            return GenerateBeginSurveyModel(answers);
+        }
+
+        private BeginSurveyViewModel GenerateBeginSurveyModel(IEnumerable<Answer> answers)
+        {
+            var l = new List<OptionViewModel>();
+            foreach (Answer answer in answers)
             {
-                
-            };
+            }
+            throw new NotImplementedException();
         }
 
         private Survey GenerateNewSurvey(Person person)

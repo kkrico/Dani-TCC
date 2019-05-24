@@ -30,6 +30,11 @@ namespace Dani_TCC.Core.Services
             _context.SaveChanges();
         }
 
+        public IEnumerable<Photo> ListValidSurveyPhotos()
+        {
+            throw new System.NotImplementedException();
+        }
+
         private void AddNewPhotos(IEnumerable<string> currentPhotoHashes, IEnumerable<string> existingPhotoHashes, IEnumerable<Photo> currentPhotos)
         {
             IEnumerable<string> hashesToAdd = currentPhotoHashes.Where(cp => !existingPhotoHashes.Contains(cp));

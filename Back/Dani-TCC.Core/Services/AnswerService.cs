@@ -8,11 +8,13 @@ namespace Dani_TCC.Core.Services
     {
         private readonly DB_PESQUISA_TCCContext _context;
         private readonly ICacheService _cacheService;
+        private readonly IPhotoService _photoService;
 
-        public AnswerService(DB_PESQUISA_TCCContext context, ICacheService cacheService)
+        public AnswerService(DB_PESQUISA_TCCContext context, ICacheService cacheService, IPhotoService photoService)
         {
             _context = context;
             _cacheService = cacheService;
+            _photoService = photoService;
         }
         
         public ICollection<Answer> GenerateAnswers()
@@ -20,12 +22,10 @@ namespace Dani_TCC.Core.Services
             IEnumerable<Photo> allPhotos = _cacheService.GetAllPhotos().OrderBy(d => d.PhotoName).ToList();
             Question question = _context.Question.First();
 
-            int total = allPhotos.Count();
-            total = total % 2 != 0 ? total - 1 : total;
-            int answerQty = total / 2;
+            int total = _photoService.ListValidSurveyPhotos().Count();
 
             var result = new List<Answer>();
-            for (int i = 0; i < answerQty; i++)
+            for (int i = 0; i < total; i++)
             {
                 var answer = new Answer()
                 {
