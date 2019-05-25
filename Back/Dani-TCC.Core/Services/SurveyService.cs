@@ -35,7 +35,10 @@ namespace Dani_TCC.Core.Services
             _context.Survey.Add(survey);
             _context.SaveChanges();
 
-            return GenerateBeginSurveyModel(answers);
+            BeginSurveyViewModel beginSurvey = GenerateBeginSurveyModel(answers);
+            beginSurvey.SurveyCommand = _context.Question.First().Questiondescription;
+
+            return beginSurvey;
         }
 
         private BeginSurveyViewModel GenerateBeginSurveyModel(IEnumerable<Answer> answers)

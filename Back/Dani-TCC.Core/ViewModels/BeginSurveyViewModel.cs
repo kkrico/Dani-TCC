@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Dani_TCC.Core.ViewModels
@@ -8,6 +9,8 @@ namespace Dani_TCC.Core.ViewModels
         {
             Questions = new List<QuestionViewModel>();
         }
+
+        public string SurveyCommand { get; set; }
         public ICollection<QuestionViewModel> Questions { get; set; }
     }
 }

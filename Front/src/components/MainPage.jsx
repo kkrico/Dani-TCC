@@ -1,5 +1,6 @@
 import React from "react";
 import { API } from "../API/API";
+import { browserHistory } from 'react-router';
 
 const socieeconomico = "SocioEconomic";
 
@@ -19,6 +20,14 @@ const Select = ({ itens, label, onChange, name }) => {
             </select>
         </div>
     </div>
+}
+
+const calculateCssClass = (isActive) => {
+    let className = "button is-large is-fullwidth";
+    if (isActive)
+        className += className + " is-loading"
+
+    return className;
 }
 
 export class MainPage extends React.Component {
@@ -44,6 +53,16 @@ export class MainPage extends React.Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handlePost = this.handlePost.bind(this);
+        this.onFinishSurveyRegister = this.onFinishSurveyRegister.bind(this);
+        require("./mainpage.scss")
+    }
+
+    onFinishSurveyRegister(model) {
+        this.setState({ loading: false });
+        this.props.history.push({
+            pathname: '/pesquisa',
+            state: { model }
+        })
     }
 
     handleChange(item) {
@@ -63,10 +82,10 @@ export class MainPage extends React.Component {
     handlePost(evt) {
 
         evt.preventDefault();
-        debugger;
-
+        this.setState({ loading: true })
         API
-            .post("/survey", this.state.questionarioSocioEconomico);
+            .post("/survey", this.state.questionarioSocioEconomico)
+            .then(this.onFinishSurveyRegister);
         return false;
     }
 
@@ -126,7 +145,8 @@ export class MainPage extends React.Component {
                                             <Select itens={this.state.sexualidade} label="Sexualidade" name="sexuality" onChange={this.handleChange}></Select>
                                         </div>
                                     </div>
-                                    <button type="submit" className="button is-large is-fullwidth" href="https://github.com/aldi/awesome-bulma-templates">
+
+                                    <button type="submit" className={calculateCssClass(this.state.loading)} href="https://github.com/aldi/awesome-bulma-templates">
                                         <span className="icon is-medium">
                                             <i className="far fa-bell"></i>
                                         </span>
