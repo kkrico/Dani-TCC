@@ -37,8 +37,12 @@ namespace Dani_TCC.Core.Services
             List<Photo> allPhotos = _cacheService.GetAllPhotos().OrderBy(d => d.PhotoName).ToList();
             
             int total = allPhotos.Count();
-            total = total % 2 != 0 ? total - 1 : total;
 
+            while (total % Constants.TotalOptions != 0)
+            {
+                total = total - 1;
+            }
+            
             return allPhotos.Take(total);
         }
 

@@ -9,12 +9,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Dani_TCC.Core.Services
 {
+    public static class Constants
+    {
+        public static readonly int TotalOptions = 2;
+    } 
     public class SurveyService : ISurveyService
     {
         private readonly DB_PESQUISA_TCCContext _context;
         private readonly IAnswerService _answerService;
         private readonly IPhotoService _photoService;
-        public static readonly int TotalOptions = 2;
 
         public SurveyService(DB_PESQUISA_TCCContext context, IAnswerService answerService, IPhotoService photoService)
         {
@@ -67,21 +70,38 @@ namespace Dani_TCC.Core.Services
 
             foreach (Answer answer in answers)
             {
-                var question = new QuestionViewModel()
-                {
-                    AnswerId = answer.Idanswer,
-                };
+                var question = new QuestionViewModel();
                 
-                for (var i = 0; i < TotalOptions; i++)
+                for (var i = 0; i < Constants.TotalOptions; i++)
                 {
+                    
                     OptionViewModel optionsViewModel = options.PopAt(0);
+                        
+                    Valueanswer valueAnswer = GenerateValueAnswer(optionsViewModel, answer);
+
                     question.Options.Add(optionsViewModel);
+                    optionsViewModel.ValueAnswerId = valueAnswer.Idvalueanswer;
                 }
                 
                 beginSurvey.Questions.Add(question);
             }
 
+
             return beginSurvey;
+        }
+
+        private Valueanswer GenerateValueAnswer(OptionViewModel optionsViewModel, Answer answer)
+        {
+            var valueAnswer = new Valueanswer()
+            {
+                Idphoto = optionsViewModel.PhotoId,
+                Idanswer = answer.Idanswer,
+            };
+
+
+            _context.Valueanswer.Add(valueAnswer);
+            _context.SaveChanges();
+            return valueAnswer;
         }
 
         private Survey GenerateNewSurvey(Person person)

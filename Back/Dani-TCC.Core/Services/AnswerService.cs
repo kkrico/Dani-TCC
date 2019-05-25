@@ -22,7 +22,7 @@ namespace Dani_TCC.Core.Services
             int total = _photoService.ListValidSurveyPhotos().Count();
 
             var result = new List<Answer>();
-            for (int i = 0; i < total / SurveyService.TotalOptions; i++)
+            for (int i = 0; i < total / Constants.TotalOptions; i++)
             {
                 var answer = new Answer()
                 {

@@ -25,6 +25,8 @@ namespace Dani_TCC.Controllers
         [HttpPost]
         public IActionResult RegisterSurvey(RegisterSurveyViewModel model)
         {
+            if (!ModelState.IsValid) return BadRequest();
+            
             return Response(_surveyService.RegisterSurvey(model));
         }
     }
