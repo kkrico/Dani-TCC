@@ -8,6 +8,8 @@ namespace Dani_TCC.Core.ViewModels
         {
            Options = new List<OptionViewModel>();
         }
+
+        public int AnswerId { get; set; }
         public ICollection<OptionViewModel> Options { get; set; }
     }
 }

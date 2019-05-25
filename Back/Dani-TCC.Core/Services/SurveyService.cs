@@ -71,6 +71,7 @@ namespace Dani_TCC.Core.Services
             foreach (Answer answer in answers)
             {
                 var question = new QuestionViewModel();
+                question.AnswerId = answer.Idanswer;
                 
                 for (var i = 0; i < Constants.TotalOptions; i++)
                 {
