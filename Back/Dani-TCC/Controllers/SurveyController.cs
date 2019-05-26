@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using Dani_TCC.Core.EventHandlers;
 using Dani_TCC.Core.Events;
 using Dani_TCC.Core.Models;
@@ -26,6 +28,14 @@ namespace Dani_TCC.Controllers
         public IActionResult RegisterSurvey(RegisterSurveyViewModel model)
         {
             return Response(_surveyService.RegisterSurvey(model));
+        }
+
+
+        [HttpPost("endsurvey")]
+        public IActionResult EndSurvey(IEnumerable<EndSurveyViewModel> endSurvey)
+        {
+            _surveyService.EndSurvey(endSurvey);
+            return Response();
         }
     }
 }

@@ -10,7 +10,7 @@ export class ThankYou extends React.Component {
             return window.location = "/";
 
         debugger;
-        API.post("/endsurvey", this.props.location.state.answers);
+        API.post("/survey/endsurvey", this.props.location.state.answers);
     }
 
     render() {
@@ -24,7 +24,7 @@ export class ThankYou extends React.Component {
                     <div className="container has-text-centered">
                         <div className="column is-8 is-offset-2">
                             <div className="center-text">
-                                <p className="title white shadow is-1">Obrigado 🤝</p>
+                                <p className="title white shadow is-1">Obrigado <span role="img" aria-label="Aperto de Maos">🤝</span></p>
                                 <p className="shadow" style={{
                                     color: "white"
                                 }}>pelo seu tempo. Em caso de duvidas, favor entrar em contato</p>

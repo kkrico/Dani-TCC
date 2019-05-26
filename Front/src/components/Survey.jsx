@@ -74,7 +74,7 @@ export class Survey extends React.Component {
                                         <span className="icon">
                                             <i className="fab fa-github"></i>
                                         </span>
-                                        <span>Made by Daniel Ramos</span>
+                                        <span>Made by Daniel</span>
                                     </a>
                                 </span>
                             </div>

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Dani_TCC.Core.Extensions;
+using Dani_TCC.Core.GuardClause;
 using Dani_TCC.Core.Helper;
 using Dani_TCC.Core.Models;
 using Dani_TCC.Core.ViewModels;
@@ -42,6 +43,62 @@ namespace Dani_TCC.Core.Services
             beginSurvey.SurveyCommand = _context.Question.First().Questiondescription;
 
             return beginSurvey;
+        }
+
+        public void EndSurvey(IEnumerable<EndSurveyViewModel> endSurvey)
+        {
+            Guard.IsNotNull(endSurvey, nameof(endSurvey));
+
+            List<Valueanswer> selectedValueAnswers = GetSelectedValueAnswers(endSurvey);
+            List<Answer> answers = GetSelectedAnswers(selectedValueAnswers);
+            List<Valueanswer> nonSelectedValueAnswers = GetNonSelectedValueAnswers(endSurvey, answers);
+            List<Survey> selectedSurveis = GetSurveys(answers);
+            
+            foreach (Valueanswer selectedValueAnswer in selectedValueAnswers)
+            {
+                selectedValueAnswer.Haschoosen = Convert.ToByte(true);
+                selectedValueAnswer.Selectiontime =
+                    endSurvey.First(d => d.ValueAnswerId == selectedValueAnswer.Idvalueanswer).InterVal;
+            }
+            
+            foreach (Valueanswer nonSelectedValueAnswer in nonSelectedValueAnswers)
+            {
+                nonSelectedValueAnswer.Haschoosen = Convert.ToByte(false);
+                nonSelectedValueAnswer.Selectiontime = null;
+            }
+
+            foreach (Survey survey in selectedSurveis)
+            {
+                survey.Finalfilldate = DateTime.Now;
+            }
+         
+            _context.SaveChanges();
+        }
+
+        private List<Survey> GetSurveys(List<Answer> selectedAnswers)
+        {
+            IEnumerable<int> idsSelectedSurveys = selectedAnswers.Select(e => e.Idsurvey);
+            return _context.Survey.Where(s => idsSelectedSurveys.Contains(s.Idsurvey)).ToList();
+        }
+
+        private List<Valueanswer> GetNonSelectedValueAnswers(IEnumerable<EndSurveyViewModel> endSurvey, List<Answer> selectedAnswers)
+        {
+              IEnumerable<int> selectedsValueAnswersId = endSurvey.Select(e => e.ValueAnswerId);
+              IEnumerable<int> selectedIsAnswers = selectedAnswers.Select(e => e.Idanswer);
+              
+              return _context.Valueanswer.Where(valueanswer => !selectedsValueAnswersId.Contains(valueanswer.Idvalueanswer) && selectedIsAnswers.Contains(valueanswer.Idanswer)).ToList();
+        }
+
+        private List<Answer> GetSelectedAnswers(List<Valueanswer> selectedValueAnswers)
+        {
+            IEnumerable<int> selectedIsAnswers = selectedValueAnswers.Select(e => e.Idanswer);
+            return _context.Answer.Where(a => selectedIsAnswers.Contains(a.Idanswer)).ToList();
+        }
+
+        private List<Valueanswer> GetSelectedValueAnswers(IEnumerable<EndSurveyViewModel> endSurvey)
+        {
+            IEnumerable<int> selectedsValueAnswersId = endSurvey.Select(e => e.ValueAnswerId);
+            return _context.Valueanswer.Where(valueanswer => selectedsValueAnswersId.Contains(valueanswer.Idvalueanswer)).ToList();
         }
 
         private BeginSurveyViewModel GenerateBeginSurveyModel(IEnumerable<Answer> answers)

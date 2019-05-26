@@ -44,4 +44,10 @@ namespace Dani_TCC.Core.ViewModels
             return !isDefined ? new ValidationResult("Invalid "+typeof(T).Name, new[]{typeof(T).Name}) : null;
         }
     }
+    
+    public class EndSurveyViewModel
+    {
+        public int ValueAnswerId { get; set; }
+        public int InterVal { get; set; }
+    }
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import { API } from "../API/API";
-import { browserHistory } from 'react-router';
 
 const socieeconomico = "SocioEconomic";
 
