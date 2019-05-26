@@ -63,9 +63,6 @@ export class Survey extends React.Component {
                         </div>
                         <div id="navbarMenuHeroC" className="navbar-menu">
                             <div className="navbar-end">
-                                <a className="navbar-item is-active" href="/pesquisa">
-                                    Questionário
-                      </a>
                                 <a className="navbar-item" href="mailto:">
                                     Dúvidas? Entre em contato
                       </a>

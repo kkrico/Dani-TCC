@@ -1,7 +1,7 @@
 import axios from "axios";
 
 var config = {
-    baseURL: 'https://localhost:5001/api/v1',
+    baseURL: 'https://pesquisapsicologia.azurewebsites.net/api/v1',
 };
 
 const parseResponse = response => {

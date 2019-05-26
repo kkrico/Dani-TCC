@@ -27,7 +27,7 @@ export class SurveyOptions extends React.Component {
 
                             var leftItens = this.props.model.questions.filter(m => m.answerId > lastAnswer)
                             if (leftItens.length === 0)
-                                return <Redirect to={{
+                                return <Redirect key={optionIndex} to={{
                                     pathname: "/obrigado",
                                     state: { answers: this.props.selectedAnswers }
                                 }}></Redirect>
