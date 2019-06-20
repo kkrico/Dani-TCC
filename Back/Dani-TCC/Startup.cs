@@ -43,7 +43,11 @@ namespace Dani_TCC
             services.AddMemoryCache();
 
             services.AddDbContext<DB_PESQUISA_TCCContext>(options =>
-                options.UseMySQL(Configuration.GetConnectionString("DB_PESQUISA_TCC")));
+            {
+                    string connectionString = Configuration.GetConnectionString("DB_PESQUISA_TCC");
+                    Console.Out.WriteLine(connectionString);
+                    options.UseMySQL(connectionString);
+                });
             
             services.AddWebApi(options =>
             {

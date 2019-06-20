@@ -28,10 +28,11 @@ namespace Dani_TCC.Filters
         {
             using(IServiceScope scope = _serviceProvider.CreateScope())
             {
-                var settings = scope.ServiceProvider.GetRequiredService<PhotoScanSettings>();
-                var service = scope.ServiceProvider.GetRequiredService<IPhotoService>();
+                var settings = scope.ServiceProvider.GetService<PhotoScanSettings>();
+                var service = scope.ServiceProvider.GetService<IPhotoService>();
                 
-                service.ParsePhotos(settings.Directory);
+                if (service != null && settings != null)
+                    service.ParsePhotos(settings.Directory);
             }
             
             return Task.CompletedTask;
