@@ -97,7 +97,6 @@ namespace Dani_TCC
                 c.AllowAnyOrigin();
             });
            
-            app.UseHttpsRedirection();
             app.UseMvc();
         }
     }
