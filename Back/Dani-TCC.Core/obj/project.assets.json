@@ -3605,11 +3605,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ramos\\Desktop\\Dani\\Back\\Dani-TCC.Core\\Dani-TCC.Core.csproj",
+      "projectUniqueName": "X:\\KK\\Dani\\Back\\Dani-TCC.Core\\Dani-TCC.Core.csproj",
       "projectName": "Dani-TCC.Core",
-      "projectPath": "C:\\Users\\ramos\\Desktop\\Dani\\Back\\Dani-TCC.Core\\Dani-TCC.Core.csproj",
+      "projectPath": "X:\\KK\\Dani\\Back\\Dani-TCC.Core\\Dani-TCC.Core.csproj",
       "packagesPath": "C:\\Users\\ramos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ramos\\Desktop\\Dani\\Back\\Dani-TCC.Core\\obj\\",
+      "outputPath": "X:\\KK\\Dani\\Back\\Dani-TCC.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
