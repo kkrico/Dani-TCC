@@ -80,7 +80,7 @@ namespace Dani_TCC
                 app.UseSwagger();
                 app.UseSwaggerUI(s =>
                 {
-                    s.SwaggerEndpoint("/swagger/v1/swagger.json", "Modelo Arquitetura API v1.1");
+                    s.SwaggerEndpoint("/swagger/v1/swagger.json", "Pesquisa Psicologia, por Daniel Ramos e Daniel Ribeiro");
                 });
 
                 app.UseDeveloperExceptionPage();
