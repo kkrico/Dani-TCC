@@ -14,7 +14,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy":"serve -s build -l 8080",
+    "deploy":"rm -rf .env && serve -s build -l 8080",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
