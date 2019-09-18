@@ -34,7 +34,7 @@ namespace Dani_TCC.Core.Models
             {
                 entity.HasKey(e => e.Idanswer);
 
-                entity.ToTable("ANSWER", "DB_PESQUISA_TCC");
+                entity.ToTable("ANSWER", "pesquisapsicologia");
 
                 entity.HasIndex(e => e.Idquestion)
                     .HasName("FK_RELATIONSHIP_3");
@@ -71,7 +71,7 @@ namespace Dani_TCC.Core.Models
             {
                 entity.HasKey(e => e.Idperson);
 
-                entity.ToTable("PERSON", "DB_PESQUISA_TCC");
+                entity.ToTable("PERSON", "pesquisapsicologia");
 
                 entity.Property(e => e.Idperson)
                     .HasColumnName("IDPERSON")
@@ -102,7 +102,7 @@ namespace Dani_TCC.Core.Models
             {
                 entity.HasKey(e => e.Idphoto);
 
-                entity.ToTable("PHOTO", "DB_PESQUISA_TCC");
+                entity.ToTable("PHOTO", "pesquisapsicologia");
 
                 entity.Property(e => e.Idphoto)
                     .HasColumnName("IDPHOTO")
@@ -142,7 +142,7 @@ namespace Dani_TCC.Core.Models
             {
                 entity.HasKey(e => e.Idquestion);
 
-                entity.ToTable("QUESTION", "DB_PESQUISA_TCC");
+                entity.ToTable("QUESTION", "pesquisapsicologia");
 
                 entity.Property(e => e.Idquestion)
                     .HasColumnName("IDQUESTION")
@@ -158,7 +158,7 @@ namespace Dani_TCC.Core.Models
             {
                 entity.HasKey(e => e.Idsurvey);
 
-                entity.ToTable("SURVEY", "DB_PESQUISA_TCC");
+                entity.ToTable("SURVEY", "pesquisapsicologia");
 
                 entity.HasIndex(e => e.Idperson)
                     .HasName("FK_RELATIONSHIP_1");
@@ -185,7 +185,7 @@ namespace Dani_TCC.Core.Models
             {
                 entity.HasKey(e => e.Idvalueanswer);
 
-                entity.ToTable("VALUEANSWER", "DB_PESQUISA_TCC");
+                entity.ToTable("VALUEANSWER", "pesquisapsicologia");
 
                 entity.HasIndex(e => e.Idanswer)
                     .HasName("FK_RELATIONSHIP_4");
