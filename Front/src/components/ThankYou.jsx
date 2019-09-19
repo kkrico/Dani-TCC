@@ -18,7 +18,7 @@ export class ThankYou extends React.Component {
             return <Redirect to="/" ></Redirect>;
 
         return (
-            <section className="hero is-fullheight">
+            <section className="hero is-fullheight" id="home">
                 <div className="hero-body">
                     <div className="container has-text-centered">
                         <div className="column is-8 is-offset-2">

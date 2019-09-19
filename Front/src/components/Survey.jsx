@@ -1,54 +1,26 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 import { SurveyOptions } from "./SurveyOptions";
-export class Survey extends React.Component {
-    constructor(props) {
-        super(props);
-        require("./survey.scss");
-        this.state = {
-            selectedAnswers: [],
-            lastAnswer: null,
-            rightWasPressed: false,
-            leftWasPressed: false
-        };
-        this.voteOnLeft = this.voteOnLeft.bind(this);
-        this.voteOnRight = this.voteOnRight.bind(this);
-        this.setOnRight = this.setOnRight.bind(this);
-        this.setOnLeft = this.setOnLeft.bind(this);
-    }
-    voteOnLeft(valueAnswerId, interVal, answerId) {
-        const { selectedAnswers } = this.state;
-        selectedAnswers.push({
-            valueAnswerId: valueAnswerId,
-            interVal: interVal
-        });
-        this.setState({ rightWasPressed: false, leftWasPressed: false, selectedAnswers, lastAnswer: answerId });
-    }
-    voteOnRight(valueAnswerId, interVal, answerId) {
-        const { selectedAnswers } = this.state;
-        selectedAnswers.push({
-            valueAnswerId: valueAnswerId,
-            interVal: interVal,
-        });
-        this.setState({ rightWasPressed: false, leftWasPressed: false, selectedAnswers, lastAnswer: answerId });
-    }
-    setOnRight() {
-        this.setState({ rightWasPressed: true });
-    }
-    setOnLeft() {
-        this.setState({ leftWasPressed: true });
-    }
-    render() {
-        if (typeof (this.props.location.state) == "undefined")
-            return <Redirect to="/"></Redirect>;
-        return (<section className="hero is-success is-fullheight" tabIndex="0" onKeyDown={(evt) => {
+import DeviceOrientation, { Orientation } from 'react-screen-orientation';
+import isMobileDevice from "./isMobile";
+import "./survey.scss";
+
+const SurveyWeb = (props) => {
+
+    const { location, setOnRight, setOnLeft, voteOnLeft, lastAnswer, voteOnRight, selectedAnswers, leftWasPressed, rightWasPressed } = props;
+
+    if (typeof (location.state) == "undefined")
+        return <Redirect to="/"></Redirect>;
+
+    return (
+        <section className="hero is-success is-fullheight" tabIndex="0" onKeyDown={(evt) => {
             if (evt.key === "ArrowRight") {
                 // Votar no da direita
-                this.setOnRight();
+                setOnRight();
             }
             if (evt.key === "ArrowLeft") {
                 // Votar no da esquerda
-                this.setOnLeft();
+                setOnLeft();
             }
         }}>
             <div className="hero-head">
@@ -85,17 +57,94 @@ export class Survey extends React.Component {
                     <div className="column is-8 is-offset-2">
                         <div className="center-text">
                             <SurveyOptions
+                                model={location.state.model}
+                                voteOnLeft={voteOnLeft}
+                                lastAnswer={lastAnswer}
+                                voteOnRight={voteOnRight}
+                                selectedAnswers={selectedAnswers}
+                                rightWasPressed={rightWasPressed}
+                                leftWasPressed={leftWasPressed}></SurveyOptions>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>)
+}
+
+
+export class Survey extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            selectedAnswers: [],
+            lastAnswer: null,
+            rightWasPressed: false,
+            leftWasPressed: false,
+            isMobile: isMobileDevice()
+        };
+        this.voteOnLeft = this.voteOnLeft.bind(this);
+        this.voteOnRight = this.voteOnRight.bind(this);
+        this.setOnRight = this.setOnRight.bind(this);
+        this.setOnLeft = this.setOnLeft.bind(this);
+    }
+
+    voteOnLeft(valueAnswerId, interVal, answerId) {
+        const { selectedAnswers } = this.state;
+        selectedAnswers.push({
+            valueAnswerId: valueAnswerId,
+            interVal: interVal
+        });
+        this.setState({ rightWasPressed: false, leftWasPressed: false, selectedAnswers, lastAnswer: answerId });
+    }
+
+    voteOnRight(valueAnswerId, interVal, answerId) {
+        const { selectedAnswers } = this.state;
+        selectedAnswers.push({
+            valueAnswerId: valueAnswerId,
+            interVal: interVal,
+        });
+        this.setState({ rightWasPressed: false, leftWasPressed: false, selectedAnswers, lastAnswer: answerId });
+    }
+
+    setOnRight() {
+        this.setState({ rightWasPressed: true });
+    }
+
+    setOnLeft() {
+        this.setState({ leftWasPressed: true });
+    }
+
+    render() {
+
+        if (this.state.isMobile) {
+            return (
+                <DeviceOrientation lockOrientation={'landscape'}>
+                    <Orientation orientation='landscape' alwaysRender={false}>
+                        <div style={{ background: "#9B3134", height: "100vh", overflow: "hidden" }}>
+                            <SurveyOptions
                                 model={this.props.location.state.model}
                                 voteOnLeft={this.voteOnLeft}
                                 lastAnswer={this.state.lastAnswer}
                                 voteOnRight={this.voteOnRight}
                                 selectedAnswers={this.state.selectedAnswers}
                                 rightWasPressed={this.state.rightWasPressed}
+                                isMobile={this.state.isMobile}
                                 leftWasPressed={this.state.leftWasPressed}></SurveyOptions>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>);
+                    </Orientation>
+                    <Orientation orientation='portrait' alwaysRender={false}>
+                        <div className="hero-body" style={{ background: "white" }}>
+                            <div className="container has-text-centered">
+                                <h1>Por favor gire 🔄</h1>
+                                <h1>seu celular para que possamos iniciar</h1>
+                            </div>
+                        </div>
+                    </Orientation>
+                </DeviceOrientation>
+            )
+        } else {
+            return <SurveyWeb {...this.props} {...this.state} setOnRight={this.setOnRight}
+                setOnLeft={this.setOnLeft} voteOnLeft={this.voteOnLeft} voteOnRight={this.voteOnRight} />
+        };
     }
 }

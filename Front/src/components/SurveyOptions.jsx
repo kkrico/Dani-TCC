@@ -18,10 +18,10 @@ export class SurveyOptions extends React.Component {
     render() {
         const { model, rightWasPressed, leftWasPressed, lastAnswer } = this.props;
         return <React.Fragment>
-            <p className="title white shadow is-1">{model.surveyCommand}</p>
+            <p className={"title white shadow "+(this.propsisMobile ? "is-2" : "is-1")}>{model.surveyCommand}</p>
             <br></br>
             {
-                model.questions.map((question, questionIndex) => <div className="columns" key={questionIndex}>
+                model.questions.map((question, questionIndex) => <div className="columns is-mobile" key={questionIndex}>
                     {
                         question.options.map((option, optionIndex) => {
 
@@ -36,7 +36,7 @@ export class SurveyOptions extends React.Component {
                             var isTheNextOne = leftItens[0].answerId === question.answerId;
                             if ((!isTheFirstOne && lastAnswer == null) || (!isTheNextOne && lastAnswer !== null))
                                 return null;
-                            return <UserPhoto option={option} optionIndex={optionIndex}
+                            return <UserPhoto isMobile={this.props.isMobile} option={option} optionIndex={optionIndex}
                                 key={optionIndex}
                                 onUserPhotoClick={
                                     (optionIndex, option, interVal) => this.onUserPhotoClick(optionIndex, option, interVal, question)}

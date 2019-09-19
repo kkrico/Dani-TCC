@@ -9,12 +9,13 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
+    "react-screen-orientation": "0.0.4",
     "react-scripts": "3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy":"rm -rf .env && serve -s build -l 8080",
+    "deploy": "rm -rf .env && serve -s build -l 8080",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

@@ -6,3 +6,18 @@ $button-color:#fff;
 $button-border-color:#3E3432;
 $subtitle-color: #fff;
 $label-color: white;
+
+
+.columns {
+	margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+
+	.columns {
+	    margin-left: -2rem;
+	    margin-right: -2rem;
+	    margin-top: -2rem;
+	}
+
+}
