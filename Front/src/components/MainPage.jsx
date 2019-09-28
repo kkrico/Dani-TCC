@@ -31,7 +31,6 @@ const calculateCssClass = (isActive) => {
 
 const alterarIdade = (valor, state) => {
 
-    debugger;
     const { questionarioSocioEconomico } = state
     questionarioSocioEconomico.age = valor;
     return questionarioSocioEconomico;
@@ -92,7 +91,6 @@ export class MainPage extends React.Component {
 
             const isValida = /^\d*$/.test(evt.target.value) && (evt.target.value === "" || parseInt(evt.target.value) <= 122)
 
-            debugger;
             if (isValida) {
                 const valorAlterado = alterarIdade(evt.target.value, this.state);
                 this.setState({ questionarioSocioEconomico: valorAlterado })
