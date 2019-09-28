@@ -36,13 +36,6 @@ namespace Dani_TCC.Controllers
         }
         
         [HttpGet]
-        [Route("agegroup")]
-        public IActionResult GetAgeGroup()
-        {
-            return Response(_enumService.GetAll<AgeGroup>());
-        }
-        
-        [HttpGet]
         [Route("familyincome")]
         public IActionResult GetFamilyIncome()
         {

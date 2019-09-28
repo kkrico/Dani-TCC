@@ -20,7 +20,6 @@ namespace Dani_TCC.Core.ViewModels
             var result = new List<ValidationResult>();
             Validate<Ethnicity>(Ethnicity, result);
             Validate<Gender>(Ethnicity, result);
-            Validate<AgeGroup>(Ethnicity, result);
             Validate<FamilyIncome>(Ethnicity, result);
             Validate<Sexuality>(Ethnicity, result);
 

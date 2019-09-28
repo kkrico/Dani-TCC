@@ -29,6 +29,14 @@ const calculateCssClass = (isActive) => {
     return className;
 }
 
+const alterarIdade = (valor, state) => {
+
+    debugger;
+    const { questionarioSocioEconomico } = state
+    questionarioSocioEconomico.age = valor;
+    return questionarioSocioEconomico;
+}
+
 export class MainPage extends React.Component {
 
     constructor(props) {
@@ -37,14 +45,13 @@ export class MainPage extends React.Component {
         this.state = {
             etnia: [],
             genero: [],
-            faixaetaria: [],
             rendafamiliar: [],
             sexualidade: [],
             loading: false,
             questionarioSocioEconomico: {
                 ethnicity: null,
                 gender: null,
-                agegroup: null,
+                age: null,
                 familyincome: null,
                 sexuality: null,
             }
@@ -53,6 +60,8 @@ export class MainPage extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         this.handlePost = this.handlePost.bind(this);
         this.onFinishSurveyRegister = this.onFinishSurveyRegister.bind(this);
+        this.handleIdade = this.handleIdade.bind(this);
+
         require("./mainpage.scss")
     }
 
@@ -78,6 +87,26 @@ export class MainPage extends React.Component {
         })
     }
 
+    handleIdade(evt) {
+        if (evt.target.value) {
+
+            const isValida = /^\d*$/.test(evt.target.value) && (evt.target.value === "" || parseInt(evt.target.value) <= 122)
+
+            debugger;
+            if (isValida) {
+                const valorAlterado = alterarIdade(evt.target.value, this.state);
+                this.setState({ questionarioSocioEconomico: valorAlterado })
+            } else {
+                const valorAlterado = alterarIdade(null, this.state);
+                this.setState({ questionarioSocioEconomico: valorAlterado })
+            }
+
+        } else {
+            const valorAlterado = alterarIdade(null, this.state);
+            this.setState({ questionarioSocioEconomico: valorAlterado })
+        }
+    }
+
     handlePost(evt) {
 
         evt.preventDefault();
@@ -92,14 +121,13 @@ export class MainPage extends React.Component {
 
         this.setState({ loading: true })
         Promise.all(
-            getAll(["ethnicity", "gender", "agegroup", "familyincome", "sexuality"])
+            getAll(["ethnicity", "gender", "familyincome", "sexuality"])
         ).then(itens => {
-            const [etnia, genero, faixaetaria, rendafamiliar, sexualidade] = itens;
+            const [etnia, genero, rendafamiliar, sexualidade] = itens;
 
             this.setState({
                 etnia,
                 genero,
-                faixaetaria,
                 rendafamiliar,
                 sexualidade,
                 loading: false
@@ -135,7 +163,8 @@ export class MainPage extends React.Component {
                                             <Select itens={this.state.genero} name="gender" label="Genero" onChange={this.handleChange}></Select>
                                         </div>
                                         <div className="column">
-                                            <Select itens={this.state.faixaetaria} name="agegroup" label="Faixa Etária" onChange={this.handleChange}></Select>
+                                            <label className="label shadow">Idade</label>
+                                            <input className="input" onChange={this.handleIdade} value={this.state.questionarioSocioEconomico.age === null ? "" : this.state.questionarioSocioEconomico.age}></input>
                                         </div>
                                         <div className="column">
                                             <Select itens={this.state.rendafamiliar} name="familyincome" label="Renda Familiar" onChange={this.handleChange}></Select>

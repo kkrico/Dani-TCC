@@ -44,6 +44,4 @@ namespace Dani_TCC.Filters
             return Task.CompletedTask;
         }
     }
-
-
 }

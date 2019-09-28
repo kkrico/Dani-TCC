@@ -135,7 +135,7 @@ export class Survey extends React.Component {
                     <Orientation orientation='portrait' alwaysRender={false}>
                         <div className="hero-body" style={{ background: "white" }}>
                             <div className="container has-text-centered">
-                                <h1>Por favor gire 🔄</h1>
+                                <h1>Por favor gire <span role="img" aria-label="Girar">🔄</span></h1>
                                 <h1>seu celular para que possamos iniciar</h1>
                             </div>
                         </div>

@@ -14,7 +14,6 @@ namespace Dani_TCC.Core.Models
         public int? Idperson { get; set; }
         public DateTime Initialfilldate { get; set; }
         public DateTime? Finalfilldate { get; set; }
-
         public Person IdpersonNavigation { get; set; }
         public ICollection<Answer> Answer { get; set; }
     }
