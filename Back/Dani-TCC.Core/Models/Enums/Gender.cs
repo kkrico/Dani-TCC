@@ -8,7 +8,7 @@ namespace Dani_TCC.Core.Models.Enums
         Male = 1,
         [Description("Feminino")]
         Female = 2,
-[Description("Outro")
+[Description("Outro")]
 Other = 3
     }
 }
