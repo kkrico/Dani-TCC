@@ -36,7 +36,7 @@ export class UserPhoto extends React.Component {
         const imageBase64 = "data:image/png;base64, " + option.base64Photo;
 
         return (<div key={optionIndex} className="column    ">
-            <img src={imageBase64} alt="Candidato" title="Este candidato parece mais competente para você? Se sim, clique nele para votar" className="userphoto animated grow" onClick={() => onUserPhotoClick(optionIndex, option, this.state.interVal)} style={{ height: isMobile ? "200px" : "" }}></img>
+            <img src={imageBase64} alt="Candidato" title="Este candidato parece mais confiável para você? Se sim, clique nele para votar" className="userphoto animated grow" onClick={() => onUserPhotoClick(optionIndex, option, this.state.interVal)} style={{ height: isMobile ? "200px" : "" }}></img>
             <br></br>
             <button className="button" onClick={() => onUserPhotoClick(optionIndex, option, this.state.interVal)}>
                 Candidato</button>

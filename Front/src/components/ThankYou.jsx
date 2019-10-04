@@ -26,7 +26,7 @@ export class ThankYou extends React.Component {
                                 <p className="title white shadow is-1">Obrigado <span role="img" aria-label="Aperto de Maos">🤝</span></p>
                                 <p className="shadow" style={{
                                     color: "white"
-                                }}>pelo seu tempo. Sua pesquisa foi registrada com <strong style={{color: "green"}}>sucesso</strong>. Em caso de dúvidas, sugestões ou críticas, favor entrar em contato</p>
+                                }}>pelo seu tempo. Sua pesquisa foi registrada com <strong style={{ color: "green" }}>sucesso</strong>. Em caso de dúvidas, sugestões ou críticas, favor entrar em contato</p>
                                 <br></br>
                                 <a href="/" className="button">Voltar ao inicio</a>
                             </div>

@@ -140,7 +140,7 @@ export class MainPage extends React.Component {
                     <div className="container has-text-centered">
                         <div className="column is-8 is-offset-2">
                             <div className="center-text">
-                                <p className="title white shadow is-1">O QUE DEFINE ALGUÉM COMO COMPETENTE?</p>
+                                <p className="title white shadow is-1">O QUE DEFINE ALGUÉM COMO CONFIÁVEL?</p>
                                 <button className="facebook-button button is-medium"><i className="fab fa-facebook-f"></i></button>
                                 <button className="twitter-button button is-medium"><i className="fab fa-twitter"></i></button>
                                 <button className="google-button button is-medium"><i className="fab fa-google-plus-g"></i></button>
@@ -148,7 +148,7 @@ export class MainPage extends React.Component {
                                 <br></br>
                                 <br></br>
                                 <p className="subtitle is-4 shadow">
-                                    Na tarefa seguir, você será apresentado a um conjunto de imagens  de políticos para classificar quem lhe parece mais competente. Você deve classifica-los o mais rápido que puder, de preferência em menos de 3 segundos. Para agilizar o processo, mantenha a mão sobre as setas esquerda e direita para poder responder mais rapidamente
+                                    Na tarefa seguir, você será apresentado a um conjunto de imagens  de políticos para classificar quem lhe parece mais confiável. Você deve classifica-los o mais rápido que puder, de preferência em menos de 3 segundos. Para agilizar o processo, mantenha a mão sobre as setas esquerda e direita para poder responder mais rapidamente
                                 </p>
                                 <p className="subtitle shadow is-marginless">Dados socieconomicos: (opcionais) </p>
                                 <br />

@@ -13,7 +13,7 @@ namespace Dani_TCC.Core.Services
     public static class Constants
     {
         public static readonly int TotalOptions = 2;
-    } 
+    }
     public class SurveyService : ISurveyService
     {
         private readonly DB_PESQUISA_TCCContext _context;
@@ -26,13 +26,13 @@ namespace Dani_TCC.Core.Services
             _answerService = answerService;
             _photoService = photoService;
         }
-        
+
         public BeginSurveyViewModel RegisterSurvey(RegisterSurveyViewModel model)
         {
             Person person = AddNewPersonFrom(model);
 
             ICollection<Answer> answers = _answerService.GenerateAnswers();
-            
+
             Survey survey = GenerateNewSurvey(person);
             survey.Answer = answers;
 
@@ -53,14 +53,14 @@ namespace Dani_TCC.Core.Services
             List<Answer> answers = GetSelectedAnswers(selectedValueAnswers);
             List<Valueanswer> nonSelectedValueAnswers = GetNonSelectedValueAnswers(endSurvey, answers);
             List<Survey> selectedSurveis = GetSurveys(answers);
-            
+
             foreach (Valueanswer selectedValueAnswer in selectedValueAnswers)
             {
                 selectedValueAnswer.Haschoosen = Convert.ToByte(true);
                 selectedValueAnswer.Selectiontime =
                     endSurvey.First(d => d.ValueAnswerId == selectedValueAnswer.Idvalueanswer).InterVal;
             }
-            
+
             foreach (Valueanswer nonSelectedValueAnswer in nonSelectedValueAnswers)
             {
                 nonSelectedValueAnswer.Haschoosen = Convert.ToByte(false);
@@ -71,7 +71,7 @@ namespace Dani_TCC.Core.Services
             {
                 survey.Finalfilldate = DateTime.Now;
             }
-         
+
             _context.SaveChanges();
         }
 
@@ -83,10 +83,10 @@ namespace Dani_TCC.Core.Services
 
         private List<Valueanswer> GetNonSelectedValueAnswers(IEnumerable<EndSurveyViewModel> endSurvey, List<Answer> selectedAnswers)
         {
-              IEnumerable<int> selectedsValueAnswersId = endSurvey.Select(e => e.ValueAnswerId);
-              IEnumerable<int> selectedIsAnswers = selectedAnswers.Select(e => e.Idanswer);
-              
-              return _context.Valueanswer.Where(valueanswer => !selectedsValueAnswersId.Contains(valueanswer.Idvalueanswer) && selectedIsAnswers.Contains(valueanswer.Idanswer)).ToList();
+            IEnumerable<int> selectedsValueAnswersId = endSurvey.Select(e => e.ValueAnswerId);
+            IEnumerable<int> selectedIsAnswers = selectedAnswers.Select(e => e.Idanswer);
+
+            return _context.Valueanswer.Where(valueanswer => !selectedsValueAnswersId.Contains(valueanswer.Idvalueanswer) && selectedIsAnswers.Contains(valueanswer.Idanswer)).ToList();
         }
 
         private List<Answer> GetSelectedAnswers(List<Valueanswer> selectedValueAnswers)
@@ -97,7 +97,7 @@ namespace Dani_TCC.Core.Services
 
         private List<Valueanswer> GetSelectedValueAnswers(IEnumerable<EndSurveyViewModel> endSurvey)
         {
-            IEnumerable<int> selectedsValueAnswersId = endSurvey.Select(e => e.ValueAnswerId);
+            IEnumerable<int> selectedsValueAnswersId = endSurvey.Select(e => e.ValueAnswerId).ToList();
             return _context.Valueanswer.Where(valueanswer => selectedsValueAnswersId.Contains(valueanswer.Idvalueanswer)).ToList();
         }
 
@@ -108,16 +108,16 @@ namespace Dani_TCC.Core.Services
 
             do
             {
-                int randomIndex = RandomNumber.Between(0, photos.Count()-1);
+                int randomIndex = RandomNumber.Between(0, photos.Count() - 1);
 
                 Photo sortedPhoto = photos.ElementAt(randomIndex);
-                
+
                 var optionViewModel = new OptionViewModel()
                 {
                     PhotoId = sortedPhoto.Idphoto,
                     Base64Photo = Convert.ToBase64String(sortedPhoto.FileContents)
                 };
-                
+
                 options.Add(optionViewModel);
                 photos.Remove(sortedPhoto);
 
@@ -125,26 +125,50 @@ namespace Dani_TCC.Core.Services
 
             var beginSurvey = new BeginSurveyViewModel();
 
+            var savedValueAnswers = new List<Valueanswer>();
+            var optionVIewModelList = new List<OptionViewModel>();
+            var questionViewModelList = new List<QuestionViewModel>();
+
             foreach (Answer answer in answers)
             {
-                var question = new QuestionViewModel();
-                question.AnswerId = answer.Idanswer;
-                
+                var question = new QuestionViewModel { AnswerId = answer.Idanswer };
+                questionViewModelList.Add(question);
+
                 for (var i = 0; i < Constants.TotalOptions; i++)
                 {
-                    
+
                     OptionViewModel optionsViewModel = options.PopAt(0);
-                        
+
                     Valueanswer valueAnswer = GenerateValueAnswer(optionsViewModel, answer);
 
+                    _context.Valueanswer.Add(valueAnswer);
                     question.Options.Add(optionsViewModel);
-                    optionsViewModel.ValueAnswerId = valueAnswer.Idvalueanswer;
+                    savedValueAnswers.Add(valueAnswer);
+                    optionVIewModelList.Add(optionsViewModel);
+                    // optionsViewModel.ValueAnswerId = valueAnswer.Idvalueanswer;
                 }
-                
+            }
+
+            _context.SaveChanges();
+
+            foreach (QuestionViewModel question in questionViewModelList)
+            {
+                var firstOption = optionVIewModelList.PopAt(0);
+                var secondOption = optionVIewModelList.PopAt(0);
+
+                var firstValueAnswer = savedValueAnswers.PopAt(0);
+                var secondValueAnswer = savedValueAnswers.PopAt(0);
+
+                firstOption.ValueAnswerId = firstValueAnswer.Idvalueanswer;
+                secondOption.ValueAnswerId = secondValueAnswer.Idvalueanswer;
+
+                question.Options = new List<OptionViewModel> { firstOption, secondOption };
+
                 beginSurvey.Questions.Add(question);
             }
 
 
+            beginSurvey.Questions = beginSurvey.Questions.OrderBy(d => d.AnswerId).ToList();
             return beginSurvey;
         }
 
@@ -153,11 +177,11 @@ namespace Dani_TCC.Core.Services
             var valueAnswer = new Valueanswer()
             {
                 Idphoto = optionsViewModel.PhotoId,
-                Idanswer = answer.Idanswer,
+                IdanswerNavigation = answer,
             };
 
 
-            _context.Valueanswer.Add(valueAnswer);
+            //_context.Valueanswer.Add(valueAnswer);
             //_context.SaveChanges();
             return valueAnswer;
         }
