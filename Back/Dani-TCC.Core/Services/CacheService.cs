@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Dani_TCC.Core.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 
 namespace Dani_TCC.Core.Services
@@ -31,7 +32,7 @@ namespace Dani_TCC.Core.Services
         
         public IEnumerable<Photo> GetAllPhotos()
         {
-            return GetOrAssignment(Photos, () => _context.Photo.ToList());
+            return GetOrAssignment(Photos, () => _context.Photo.AsNoTracking().ToList());
         }
     }
 }

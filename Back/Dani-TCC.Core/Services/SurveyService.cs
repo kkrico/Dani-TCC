@@ -40,7 +40,7 @@ namespace Dani_TCC.Core.Services
             _context.SaveChanges();
 
             BeginSurveyViewModel beginSurvey = GenerateBeginSurveyModel(answers);
-            beginSurvey.SurveyCommand = _context.Question.First().Questiondescription;
+            beginSurvey.SurveyCommand = _context.Question.AsNoTracking().First().Questiondescription;
 
             return beginSurvey;
         }
@@ -158,7 +158,7 @@ namespace Dani_TCC.Core.Services
 
 
             _context.Valueanswer.Add(valueAnswer);
-            _context.SaveChanges();
+            //_context.SaveChanges();
             return valueAnswer;
         }
 
