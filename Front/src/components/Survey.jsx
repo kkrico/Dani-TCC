@@ -75,13 +75,18 @@ const SurveyWeb = (props) => {
 export class Survey extends React.Component {
     constructor(props) {
         super(props);
+        const ua = navigator.userAgent || navigator.vendor || window.opera;
+        
         this.state = {
             selectedAnswers: [],
             lastAnswer: null,
             rightWasPressed: false,
             leftWasPressed: false,
-            isMobile: isMobileDevice()
+            isMobile: isMobileDevice(),
+            isInstagram : (ua.indexOf('Instagram') > -1) ? true : false;
         };
+        
+        
         this.voteOnLeft = this.voteOnLeft.bind(this);
         this.voteOnRight = this.voteOnRight.bind(this);
         this.setOnRight = this.setOnRight.bind(this);
@@ -115,6 +120,14 @@ export class Survey extends React.Component {
     }
 
     render() {
+        if (this.state.isInstagram) {
+            return <div className="hero-body" style={{ background: "white" }}>
+                            <div className="container has-text-centered">
+                             <h1>Aparentemente, você está no Instagram. <span role="img" aria-label="Girar">🤳</span></h1>
+                             <h2>Por favor, acesso <a href="http://pesquisapsicologia.dframos.com">pesquisapsicologia.dframos.com no seu navegador</h2>
+                </div>
+           </div>
+        }
 
         if (this.state.isMobile) {
             return (
