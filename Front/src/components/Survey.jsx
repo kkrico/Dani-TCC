@@ -124,7 +124,7 @@ export class Survey extends React.Component {
             return <div className="hero-body" style={{ background: "white" }}>
                 <div className="container has-text-centered">
                     <h1>Aparentemente, você está no Instagram. <span role="img" aria-label="Girar">🤳</span></h1>
-                    <h2>Por favor, acesso <a href="http://pesquisapsicologia.dframos.com">pesquisapsicologia.dframos.com no seu navegador</a></h2>
+                    <h2>Por favor, acesse <a href="http://pesquisapsicologia.dframos.com">http://pesquisapsicologia.dframos.com</a>no seu navegador</h2>
                 </div>
             </div>
         }
