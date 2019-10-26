@@ -140,7 +140,7 @@ export class MainPage extends React.Component {
                     <div className="container has-text-centered">
                         <div className="column is-8 is-offset-2">
                             <div className="center-text">
-                                <p className="title white shadow is-1">O QUE DEFINE ALGUÉM COMO CONFIÁVEL?</p>
+                                <p className="title white shadow is-1">O QUE DEFINE ALGUÉM COMO COMPETENTE?</p>
                                 <button className="facebook-button button is-medium"><i className="fab fa-facebook-f"></i></button>
                                 <button className="twitter-button button is-medium"><i className="fab fa-twitter"></i></button>
                                 <button className="google-button button is-medium"><i className="fab fa-google-plus-g"></i></button>
