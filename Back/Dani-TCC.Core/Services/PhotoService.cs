@@ -51,7 +51,7 @@ namespace Dani_TCC.Core.Services
             IEnumerable<string> hashesToAdd = currentPhotoHashes.Where(cp => !existingPhotoHashes.Contains(cp));
             foreach (string hashToAdd in hashesToAdd)
             {
-                Photo newPhoto = currentPhotos.First(d => d.Photohash == hashToAdd);
+                Photo newPhoto = currentPhotos.Single(d => d.Photohash == hashToAdd);
                 _context.Add(newPhoto);
             }
         }

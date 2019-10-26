@@ -104,14 +104,28 @@ namespace Dani_TCC.Core.Services
         private BeginSurveyViewModel GenerateBeginSurveyModel(IEnumerable<Answer> answers)
         {
             var options = new List<OptionViewModel>();
-            List<Photo> photos = _photoService.ListValidSurveyPhotos().ToList();
+            var photos = _photoService.ListValidSurveyPhotos().ToList();
+            var photoBuffer = new List<Photo>();
 
             do
             {
-                int randomIndex = RandomNumber.Between(0, photos.Count() - 1);
-
+                var randomIndex = RandomNumber.Between(0, photos.Count - 1);
                 Photo sortedPhoto = photos.ElementAt(randomIndex);
 
+                var shouldSortAgain = false;
+                var isSecondOne = photos.Count % 2 != 0;
+                Photo previousPhoto = photoBuffer.LastOrDefault();
+                if (isSecondOne)
+                {
+                    if (previousPhoto == null)
+                        throw new InvalidOperationException();
+
+                    shouldSortAgain = previousPhoto.Elected == sortedPhoto.Elected;
+                }
+
+                if (shouldSortAgain) continue;
+
+                photoBuffer.Add(sortedPhoto);
                 var optionViewModel = new OptionViewModel()
                 {
                     PhotoId = sortedPhoto.Idphoto,
