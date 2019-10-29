@@ -148,7 +148,7 @@ export class MainPage extends React.Component {
                                 <br></br>
                                 <br></br>
                                 <p className="subtitle is-4 shadow">
-                                    Na tarefa seguir, você será apresentado a um conjunto de imagens  de políticos para classificar quem lhe parece mais confiável. Você deve classifica-los o mais rápido que puder, de preferência em menos de 3 segundos. Para agilizar o processo, mantenha a mão sobre as setas esquerda e direita para poder responder mais rapidamente
+                                    Na tarefa seguir, você será apresentado a um conjunto de imagens  de políticos para classificar quem lhe parece mais competente. Você deve classificá-los o mais rápido que puder, de preferência em menos de 3 segundos. Para agilizar o processo, mantenha a mão sobre as setas esquerda e direita para poder responder mais rapidamente
                                 </p>
                                 <p className="subtitle shadow is-marginless">Dados socieconomicos: (opcionais) </p>
                                 <br />
