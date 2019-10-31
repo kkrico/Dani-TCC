@@ -56,10 +56,19 @@ void Main()
 				 return resultado;
 			 });
 
+	f.SelectMany(e => e.Questoes).SelectMany(e => e.Opcoes).GroupBy(d => new { d.Candidato, d.Eleito })
+	.Select(e => new
+	{
+		e.Key.Candidato,
+		e.Key.Eleito,
+		QtdVezesEscolhido = e.Count(y => y.FoiEscolhido == "Sim"),
+		QtdVezesNaoEscolhido = e.Count(y => y.FoiEscolhido == "Não")
+	}).Dump();
+
 	//	 f.Count(d => d.Questoes.Where(e => e.Opcoes.Select(h => h.Eleito).Distinct().Count() == 2).Count() > 0).Dump();
-	f.Select(d => new { d.IdentificadorQuestionario, Invalidos = d.Questoes.Where(q => q.Opcoes.Select(e => e.Eleito).Distinct().Count() == 1) })
-	.Dump();
-//	.OrderByDescending(h => h.Invalidos).Dump();
+	//	f.Select(d => new { d.IdentificadorQuestionario, Invalidos = d.Questoes.Where(q => q.Opcoes.Select(e => e.Eleito).Distinct().Count() == 1) })
+	//	.Dump();
+	//	.OrderByDescending(h => h.Invalidos).Dump();
 }
 
 // Define other methods and classes here
